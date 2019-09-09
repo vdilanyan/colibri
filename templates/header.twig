@@ -1,0 +1,23 @@
+<header itemscope itemtype="http://schema.org/WPHeader">	
+	<div class="container">
+		<div class="flex-container header-nav-bar">
+			<div itemscope itemtype="http://schema.org/Organization" id="logo">
+				<a itemprop="url" href="{{ site.url }}">
+					<img itemprop="logo" src="{{ theme.path }}/assets/img/logo.png">
+				</a>
+			</div>
+			<nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="header-main-menu">
+				<ul class="nav-main flex-container">
+					{% for item in main_menu.get_items %}
+						<li class="nav-main-item {{ item.class }}">
+							<a class="nav-main-link" href="{{ item.get_link }}">
+								{{ item.title }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<div id="wrapper"> {# START wrapper #}
