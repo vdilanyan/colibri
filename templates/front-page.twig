@@ -2,4 +2,144 @@
 
 {% block content %}
 
+<section class="home-top-banner flex-container" style="background: url({{ home.banner_image }}) no-repeat center right/60% content-box, linear-gradient(180deg, #E6F4FB 0%, rgba(247, 255, 255, 0) 111.82%);">
+	<div class="container flex-container">
+		<div class="caption">
+			{{ home.product_name ?
+				'<p class="h2 font-extra-bold product-name">' ~ home.product_name ~ '</p>'
+			}}
+			
+			<p class="slogan font-extra-bold">{{ home.slogan }}</p>
+
+			{% if home.banner_button_name is not empty %}
+				<a href="{{ home.banner_button_link }}" class="button button-primary" title="{{ home.banner_button_name }}">
+					{{ home.banner_button_name }}
+				</a>
+			{% endif %}
+		</div>
+	</div>
+</section>
+
+{% if home.we_button_name is not empty %}
+	<section class="why-ecopods flex-container">
+		<a href="{{ home.we_button_link }}" title="{{ home.we_button_name }}">
+			{{ home.we_button_name }}
+			<img src="{{ theme.path }}/assets/img/chevron-right.png" alt="chevron-right">
+		</a>
+	</section>
+{% endif %}
+
+<section class="benefits">
+	<div class="container">
+		{{ home.benefits_title ?
+			'<p class="h1-lg benefits-title font-extra-bold text-center">' ~ home.benefits_title ~ '</p>'
+		}}
+
+		<div class="benefits-list-cnt flex-container">
+			<div class="benefits-list first">
+				{% for benefit in home.benefits_first %}
+					<p class="benefit">
+						<img src="{{ benefit.benefit_icon }}" alt="{{ benefit.benefit_text }}">
+						{{ benefit.benefit_text }}
+					</p>
+				{% endfor %}
+			</div>
+			<div class="capsule-image">
+				<img src="{{ home.benefits_image }}" alt="capsule">
+			</div>
+			<div class="benefits-list second">
+				{% for benefit in home.benefits_second %}
+					<p class="benefit">
+						{{ benefit.benefit_text }}
+						<img src="{{ benefit.benefit_icon }}" alt="{{ benefit.benefit_text }}">
+					</p>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="steps" style="background: url({{ home.steps_image }}) no-repeat center right/45% content-box">
+	<div class="container">
+		<div class="flex-container steps-content-cnt">
+			<div class="section-content">
+				{{ home.steps_title ? 
+					'<p class="h1-lg steps-title font-extra-bold">' ~ home.steps_title ~ '</p>'
+				}}
+
+				<div class="steps-list">
+					{% for step in home.steps %}
+						<p>{{ step.step }}</p>
+					{% endfor %}
+				</div>
+
+				{% if home.steps_button_name is not empty %}
+					<a href="{{ home.steps_button_link }}" class="button button-primary" title="{{ home.steps_button_name }}">
+						{{ home.steps_button_name }}
+					</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="product-information text-center">
+	<div class="product-information-cnt">
+		{{ home.pi_image ?
+			'<img src="' ~ home.pi_image ~ '" alt="">'
+		}}
+
+		<p class="font-extra-bold">{{ home.product_information }}</p>
+
+		{% if home.pi_button_name is not empty %}
+			<a href="{{ home.pi_button_link }}" class="button button-primary" title="{{ home.pi_button_name }}">
+				{{ home.pi_button_name }}
+			</a>
+		{% endif %}
+	</div>
+</section>
+
+<section class="our-customers">
+	{{ home.our_customers_title ? 
+		'<p class="h1-lg our-customers-title text-center font-extra-bold">' ~ home.our_customers_title ~ '</p>'
+	}}
+
+	<div class="container">
+		<div class="our-customers-carousel">
+			{% for testimonial in home.our_customers %}
+				<div class="carousel-item">
+					<img src="{{ testimonial.customer_photo }}" class="customer-photo" alt="{{ testimonial.customer_name }}">
+					<div class="testimonial">
+						<i class="fa fa-quote-left"></i>
+						<p class="testimonial-text">{{ testimonial.testimonial }}</p>
+						<p class="customer-name">{{ testimonial.customer_name }}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section class="white-gradient"></section>
+
+<section class="our-values" style="background: #211B56 url({{ home.ov_image }}) no-repeat center/cover;">
+	<div class="container">
+		<div class="flex-container our-values-content-cnt">
+			<div class="section-content">
+				{{ home.ov_title ? 
+					'<p class="h1-lg our-values-title font-extra-bold">' ~ home.ov_title ~ '</p>'
+				}}
+
+				<p class="our-values-description font-extra-bold">{{ home.ov_description }}</p>
+
+				{% if home.ov_button_name is not empty %}
+					<a href="{{ home.ov_button_link }}" class="button button-secondary" title="{{ home.ov_button_name }}">
+						{{ home.ov_button_name }}
+					</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
+
 {% endblock %}

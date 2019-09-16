@@ -28,3 +28,7 @@ function res_fromname($email) {
 	return $wpfrom;
 }
 add_filter("wp_mail_from_name", "res_fromname");
+
+function get_optional_image($image_field) {
+	return $image_field ?: '';
+}
