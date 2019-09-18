@@ -210,6 +210,19 @@ footer .footer-menus .footer-nav > p {
   color: #211B56;
   margin: 0 0 20px;
 }
+footer .footer-menus .footer-nav ul.list-inline {
+  margin: 0;
+  font-size: 0;
+}
+footer .footer-menus .footer-nav ul.list-inline li {
+  padding: 0 10px;
+}
+footer .footer-menus .footer-nav ul.list-inline li:first-child {
+  padding-left: 0;
+}
+footer .footer-menus .footer-nav ul.list-inline li:last-child {
+  padding-right: 0;
+}
 footer .footer-menus .footer-nav ul:not(.social-menu) {
   margin: 0;
   padding: 0;
