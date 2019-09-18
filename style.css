@@ -303,80 +303,89 @@ footer p.copy {
 .benefits .benefits-list-cnt {
   padding-bottom: 90px;
 }
-.benefits .benefits-list,
-.benefits .capsule-image {
+.benefits .benefits-list {
   flex: 1;
+}
+.benefits .capsule-image {
+  margin: 0 130px;
 }
 .benefits .capsule-image img {
   display: block;
   margin: 0 auto;
 }
 .benefits .benefits-list {
-  padding-top: 55px;
+  color: #211B56;
 }
 .benefits .benefits-list .benefit {
   position: relative;
-  margin-bottom: 65px;
+  margin-bottom: 55px;
 }
 .benefits .benefits-list .benefit::after {
-  content: '';
   position: absolute;
-  width: 60px;
   bottom: 0;
-  border-bottom: 1px solid #211B56;
-  transform-origin: bottom;
 }
 .benefits .benefits-list .benefit:last-child {
   margin-bottom: 0;
 }
 .benefits .benefits-list.first {
   text-align: right;
-}
-.benefits .benefits-list.first .benefit::after {
-  right: 0;
-  border-right: 2px solid #211B56;
+  padding-top: 85px;
 }
 .benefits .benefits-list.first .benefit:first-child::after {
-  height: 60px;
-  transform: skew(-70deg);
+  content: url('assets/img/b-1c-1e.png');
+  left: calc(100% - 63px);
+}
+.benefits .benefits-list.first .benefit:nth-child(2) {
+  margin-right: 6px;
 }
 .benefits .benefits-list.first .benefit:nth-child(2)::after {
-  height: 95px;
-  transform: skew(-60deg);
+  content: url('assets/img/b-1c-2e.png');
+  left: calc(100% - 75px);
+}
+.benefits .benefits-list.first .benefit:nth-child(3) {
+  margin-right: 12px;
 }
 .benefits .benefits-list.first .benefit:nth-child(3)::after {
-  height: 110px;
-  transform: skew(-55deg);
+  content: url('assets/img/b-1c-3e.png');
+  left: calc(100% - 80px);
 }
 .benefits .benefits-list.first .benefit:nth-child(4)::after {
-  height: 130px;
-  transform: skew(-50deg);
+  content: url('assets/img/b-1c-4e.png');
+  left: calc(100% - 75px);
 }
 .benefits .benefits-list.first img {
   margin-right: 20px;
 }
+.benefits .benefits-list.second {
+  padding-top: 50px;
+}
 .benefits .benefits-list.second img {
   margin-left: 20px;
 }
-.benefits .benefits-list.second .benefit::after {
-  left: 0;
-  border-left: 2px solid #211B56;
-}
 .benefits .benefits-list.second .benefit:first-child::after {
-  height: 60px;
-  transform: skew(70deg);
+  content: url('assets/img/b-2c-1e.png');
+  right: calc(100% - 65px);
+}
+.benefits .benefits-list.second .benefit:nth-child(2) {
+  margin-left: 6px;
 }
 .benefits .benefits-list.second .benefit:nth-child(2)::after {
-  height: 95px;
-  transform: skew(60deg);
+  content: url('assets/img/b-2c-1e.png');
+  right: calc(100% - 55px);
+}
+.benefits .benefits-list.second .benefit:nth-child(3) {
+  margin-left: 12px;
 }
 .benefits .benefits-list.second .benefit:nth-child(3)::after {
-  height: 110px;
-  transform: skew(55deg);
+  content: url('assets/img/b-2c-2e.png');
+  right: calc(100% - 55px);
+}
+.benefits .benefits-list.second .benefit:nth-child(4) {
+  margin-left: -6px;
 }
 .benefits .benefits-list.second .benefit:nth-child(4)::after {
-  height: 130px;
-  transform: skew(50deg);
+  content: url('assets/img/b-2c-2e.png');
+  right: calc(100% - 55px);
 }
 .steps {
   height: 890px;

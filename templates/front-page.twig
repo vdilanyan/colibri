@@ -38,7 +38,7 @@
 		<div class="benefits-list-cnt flex-container">
 			<div class="benefits-list first">
 				{% for benefit in home.benefits_first %}
-					<p class="benefit">
+					<p class="benefit font-extra-bold">
 						<img src="{{ benefit.benefit_icon }}" alt="{{ benefit.benefit_text }}">
 						{{ benefit.benefit_text }}
 					</p>
@@ -49,7 +49,7 @@
 			</div>
 			<div class="benefits-list second">
 				{% for benefit in home.benefits_second %}
-					<p class="benefit">
+					<p class="benefit font-extra-bold">
 						{{ benefit.benefit_text }}
 						<img src="{{ benefit.benefit_icon }}" alt="{{ benefit.benefit_text }}">
 					</p>
