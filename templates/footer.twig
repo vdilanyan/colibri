@@ -1,17 +1,66 @@
 		</div> {# END wrapper #}
 		<footer>
-			<div class="container text-center">
-				{% if footer.social_links %}
-					<ul class="social-links flex-container">
-						{% for social in footer.social_links %}
-							<li>
-								<a href="{{ social.link }}" target="_blank">{{ social.name }}</a>
-							</li>
-						{% endfor %}
-					</ul>
-				{% endif %}
+			<div class="footer-menus">
+				<div class="container">
+					<div class="flex-container footer-nav-cnt">
+						<div class="flex-container">
+							<div class="footer-nav grow-large">
+								<p class="font-extra-bold text-uppercase">{{ __("Products", "colibri") }}</p>
+								<ul class="footer-menu products-menu">
+									{% for item in footer_menu_products.get_items %}
+										<li class="footer-nav-item {{ item.class }}">
+											<a class="footer-nav-link" href="{{ item.get_link }}">
+												{{ item.title }}
+											</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div class="footer-nav">
+								<p class="font-extra-bold text-uppercase">{{ __("Help", "colibri") }}</p>
+								<ul class="footer-menu">
+									{% for item in footer_menu_help.get_items %}
+										<li class="footer-nav-item {{ item.class }}">
+											<a class="footer-nav-link" href="{{ item.get_link }}">
+												{{ item.title }}
+											</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div class="footer-nav">
+								<p class="font-extra-bold text-uppercase">{{ __("About", "colibri") }}</p>
+								<ul class="footer-menu">
+									{% for item in footer_menu_about.get_items %}
+										<li class="footer-nav-item {{ item.class }}">
+											<a class="footer-nav-link" href="{{ item.get_link }}">
+												{{ item.title }}
+											</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+						{% if footer.social_links %}
+							<div class="footer-nav no-grow">
+								<p class="font-extra-bold text-uppercase">{{ __("Follow us on", "colibri") }}</p>
+								<ul class="footer-menu list-inline social-menu">
+									{% for item in footer.social_links %}
+										<li class="footer-nav-item">
+											<a class="footer-nav-link" href="{{ item.link }}" target="_blank" rel="nofollow">
+												<img src="{{ item.icon }}" alt="">
+											</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						{% endif %}
+					</div>
+				</div>
 			</div>
-			<p class="copy text-center">Copyright {{ "now"|date('Y') }}. {{ site.name }}. All rights reserved</p>
+			<p class="copy text-center">
+				{{ __("Copyright %s. Wolf Formulations Ltd. All rights reserved" | format("now"|date('Y')), "colibri") }}
+			</p>
 		</footer>
 		{{ function('wp_footer') }}
 	</body>

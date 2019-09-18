@@ -22,8 +22,9 @@ function custom_menus() {
 	register_nav_menus(
 		[
 			"primary-menu" => __("Primary Menu"),
-			"secondary-menu" => __("Secondary Menu"),
-			"footer-menu" => __("Footer Menu"),
+			"footer-menu-products" => __("Footer Menu (Products)"),
+			"footer-menu-help" => __("Footer Menu (Help)"),
+			"footer-menu-about" => __("Footer Menu (About)"),
 		]
 	);
 }
@@ -31,6 +32,9 @@ add_action("init", "custom_menus");
 
 function add_to_context($context) {
 	$context["main_menu"] = new \Timber\Menu("primary-menu");
+	$context["footer_menu_products"] = new \Timber\Menu("footer-menu-products");
+	$context["footer_menu_help"] = new \Timber\Menu("footer-menu-help");
+	$context["footer_menu_about"] = new \Timber\Menu("footer-menu-about");
 
 	return $context;
 }

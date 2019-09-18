@@ -17,8 +17,18 @@ header {
 			margin: 0;
 			list-style-type: none;
 
-			li {
+			> li.menu-item-has-children:hover {
+				.nav-drop-cnt {
+					transform: scale(1);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			> li {
+				position: relative;
 				margin: 0 23px;
+				padding: 12px 0;
 
 				&:first-child {
 					margin-left: 0;
@@ -28,11 +38,11 @@ header {
 					margin-right: 0;
 				}
 
-				a {
+				> a {
 					color: @primary-blue;
 					position: relative;
 
-					&::after {
+					&:not([href="#"])::after {
 						content: '';
 						height: 3px;
 						background: @primary-blue;
@@ -48,6 +58,44 @@ header {
 					&:hover {
 						&::after {
 							transform: scaleX(1);
+						}
+					}
+				}
+
+				.nav-drop-cnt {
+					position: absolute;
+					white-space: nowrap;
+					left: 0;
+					top: 100%;
+					z-index: 1000;
+					transition: .25s;
+					transform: scale(.8);
+					transform-origin: top left;
+					opacity: 0;
+					visibility: hidden;
+
+					.nav-drop {
+						list-style-type: none;
+						margin: 0;
+						padding: 20px;
+						background: #fff;
+						border-radius: 4px;
+						box-shadow: 0px 0px 20px rgba(196, 196, 196, .35);
+
+						li {
+							margin: 0 0 8px;
+
+							&:last-child {
+								margin: 0;
+							}
+
+							a {
+								font-size: 16px;
+								line-height: 24px;
+								letter-spacing: -0.025em;
+								color: @primary-blue;
+								font-family: @font-family-extra-bold;
+							}
 						}
 					}
 				}

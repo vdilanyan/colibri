@@ -1,3 +1,9 @@
+.section-title {
+	color: @secondary-blue;
+	letter-spacing: 0.02em;
+	margin: 0 0 64px;
+}
+
 .home-top-banner {
 	color: @secondary-blue;
 	padding: 140px 0 70px;
@@ -38,16 +44,18 @@
 		img {
 			margin-left: 12px;
 		}
+
+		&.fixed {
+			position: fixed;
+			top: 32px;
+			right: 0;
+			z-index: 9999;
+		}
 	}
 }
 
 .benefits {
 	margin-top: 58px;
-
-	.benefits-title {
-		margin: 0 0 64px;
-		color: @secondary-blue;
-	}
 
 	.benefits-list-cnt {
 		padding-bottom: 90px;
@@ -168,11 +176,6 @@
 		max-width: 50%;
 		align-items: center;
 
-		.steps-title {
-			margin: 0 0 60px;
-			color: @secondary-blue;
-		}
-
 		.steps-list {
 			margin-bottom: 46px;
 
@@ -219,12 +222,15 @@
 	padding: 130px 0 70px;
 	background-color: @bg-light-blue-3;
 
-	.our-customers-title {
-		margin: 0 0 46px;
-		color: @secondary-blue;
-	}
-
 	.our-customers-carousel {
+		.slick-track {
+			display: flex !important;
+		}
+
+		.slick-slide {
+			height: inherit !important;
+		}
+
 		.carousel-item {
 			padding: 76px 50px 40px;
 			position: relative;
@@ -239,7 +245,10 @@
 		}
 
 		.testimonial {
+			display: flex;
+			flex-direction: column;
 			margin: 0 auto;
+			height: 100%;
 			border-radius: 4px;
 			background-color: #fff;
 			padding: 46px 30px 18px 46px;
@@ -259,6 +268,9 @@
 			}
 
 			.customer-name {
+				display: flex;
+				height: 100%;
+				align-items: flex-end;
 				font-size: 20px;
 				margin: 0;
 			}
@@ -344,14 +356,42 @@
 				max-width: 460px;
 
 				.our-values-title {
+					color: inherit;
 					margin: 0 0 46px;
-					letter-spacing: 0.02em;
 				}
 
 				.our-values-description {
 					margin: 0 0 32px;
 					font-size: 24px;
 				}
+			}
+		}
+	}
+}
+
+.products {
+	padding: 120px 0 100px;
+
+	.products-container {
+		justify-content: center;
+
+		.product-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			flex: 0 0 33%;
+			text-align: center;
+			margin: 0 0 64px;
+
+			img {
+				max-width: 240px;
+				display: block;
+				margin: 0 auto 32px;
+			}
+
+			span {
+				font-size: 32px;
+				color: @primary-blue;
 			}
 		}
 	}

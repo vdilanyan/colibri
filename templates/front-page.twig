@@ -32,7 +32,7 @@
 <section class="benefits">
 	<div class="container">
 		{{ home.benefits_title ?
-			'<p class="h1-lg benefits-title font-extra-bold text-center">' ~ home.benefits_title ~ '</p>'
+			'<p class="h1-lg section-title benefits-title font-extra-bold text-center">' ~ home.benefits_title ~ '</p>'
 		}}
 
 		<div class="benefits-list-cnt flex-container">
@@ -64,7 +64,7 @@
 		<div class="flex-container steps-content-cnt">
 			<div class="section-content">
 				{{ home.steps_title ? 
-					'<p class="h1-lg steps-title font-extra-bold">' ~ home.steps_title ~ '</p>'
+					'<p class="h1-lg section-title steps-title font-extra-bold">' ~ home.steps_title ~ '</p>'
 				}}
 
 				<div class="steps-list">
@@ -99,9 +99,25 @@
 	</div>
 </section>
 
+<section class="products">
+	<div class="container">
+		<p class="h1-lg section-title products-title text-center font-extra-bold">
+			{{ __("Our Cleaning Products", "colibri") }}
+		</p>
+		<div class="products-container flex-container">
+			{% for product in home.products %}
+				<a href="{{ product.link }}" title="{{ product.title }}" class="product-item">
+					<img src="{{ product.get_field('homepage_image') }}" alt="{{ product.title }}">
+					<span>{{ product.title }}</span>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
 <section class="our-customers">
 	{{ home.our_customers_title ? 
-		'<p class="h1-lg our-customers-title text-center font-extra-bold">' ~ home.our_customers_title ~ '</p>'
+		'<p class="h1-lg section-title our-customers-title text-center font-extra-bold">' ~ home.our_customers_title ~ '</p>'
 	}}
 
 	<div class="container">
@@ -127,7 +143,7 @@
 		<div class="flex-container our-values-content-cnt">
 			<div class="section-content">
 				{{ home.ov_title ? 
-					'<p class="h1-lg our-values-title font-extra-bold">' ~ home.ov_title ~ '</p>'
+					'<p class="h1-lg section-title our-values-title font-extra-bold">' ~ home.ov_title ~ '</p>'
 				}}
 
 				<p class="our-values-description font-extra-bold">{{ home.ov_description }}</p>

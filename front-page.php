@@ -6,6 +6,12 @@ $steps_image = get_optional_image(get_field('steps_image'));
 $pi_image = get_optional_image(get_field('pi_image'));
 $ov_image = get_optional_image(get_field('ov_image'));
 
+$product_args = [
+	'post_type' => 'product',
+	'posts_per_page' => 5,
+	'order' => 'ASC',
+];
+
 $context['home'] = [
 	'product_name' => get_field('product_name'),
 	'slogan' => get_field('slogan'),
@@ -34,6 +40,7 @@ $context['home'] = [
 	'ov_image' => $ov_image,
 	'ov_button_name' => get_field('ov_button_name'),
 	'ov_button_link' => get_field('ov_button_link'),
+	'products' => Timber::get_posts($product_args),
 ];
 
 Timber::render('templates/front-page.twig', $context);
