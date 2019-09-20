@@ -1,0 +1,93 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+<section class="product-list">
+	<div class="container">
+		<div class="products-list-container flex-container">
+			{% for product in products_page.products %}
+				<a href="{{ product.link }}" title="{{ product.title }}" class="product-list-item list-item">
+					<img src="{{ product.get_field('products_page_image') }}" alt="{{ product.title }}">
+					<span>{{ product.title }}</span>
+				</a>
+			{% endfor %}
+			<div class="re list-item">
+				<img src="{{ theme.path }}/assets/img/re.png">
+			</div>
+		</div>
+	</div>
+</section>
+
+{% if products_page.product_information %}
+	<section class="product-information">
+		<p class="text-center">{{ products_page.product_information }}</p>
+	</section>
+{% endif %}
+
+{% if products_page.product_benefits %}
+	<section class="product-benefits">
+		<div class="container">
+			{{ products_page.benefits_title ?
+				'<p class="section-title-small">' ~ products_page.benefits_title ~ '</p>'
+			}}
+
+			<div class="flex-container benefits-columns">
+				{% for benefit in products_page.product_benefits %}
+					<div class="benefit">
+						<img src="{{ benefit.icon }}" alt="">
+						<p class="text-center">{{ benefit.benefit_text }}</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% if products_page.faqs %}
+	<section class="faqs">
+		<div class="container">
+			{{ products_page.faqs_title ?
+				'<p class="section-title-small">' ~ products_page.faqs_title ~ '</p>'
+			}}
+
+			<div class="panel-group" id="faq-accordion">
+				{% for faqs in products_page.faqs %}
+					<div class="accordion-element panel panel-default">
+						<img src="{{ theme.path }}/assets/img/frame.png" alt="faq-frame" class="faq-frame">
+						{% for faq in faqs %}
+							<div class="accordion-heading">
+								<a data-toggle="collapse" data-parent="#faq-accordion" href="#collapse-{{ faq.ID }}">
+									{{ faq.post_title }}
+								</a>
+							</div>
+							<div id="collapse-{{ faq.ID }}" class="panel-collapse collapse">
+								<div class="accordion-body">
+									{{ faq.post_content }}
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+<section class="surfaces" style="background: url('{{ products_page.surfaces_banner_image }}') no-repeat right center/cover;">
+	<div class="container">
+		<div class="surfaces-text">
+			<p class="list-title font-extra-bold">{{ __("We cover all surfaces:", "colibri") }}</p>
+			<ul class="surface-list">
+				{% for product in products_page.products %}
+					<li>
+						<a href="{{ product.link }}" title="{{ product.title }}">
+							{{ product.title }}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>
+
+{% endblock %}

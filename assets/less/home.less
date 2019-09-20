@@ -1,413 +1,415 @@
-.section-title {
-	color: @secondary-blue;
-	letter-spacing: 0.02em;
-	margin: 0 0 64px;
-}
-
-.home-top-banner {
-	color: @secondary-blue;
-	padding: 140px 0 70px;
-	height: 850px;
-	align-items: center;
-
-	.caption {
-		max-width: 500px;
-
-		p.product-name {
-			margin: 0 0 46px;
-		}
-
-		.slogan {
-			font-size: 60px;
-			margin: 0 0 64px;
-		}
-	}
-}
-
-.why-ecopods {
-	margin-top: 52px;
-	justify-content: flex-end;
-
-	a {
-		display: flex;
-		align-items: center;
-		color: @primary-blue;
-		background: @bg-light-blue-2;
-		padding: 16px 46px;
-		font-size: 24px;
+body.home {
+	.section-title {
+		color: @secondary-blue;
 		letter-spacing: 0.02em;
-
-		&:hover {
-			color: @primary-blue;
-		}
-
-		img {
-			margin-left: 12px;
-		}
-
-		&.fixed {
-			position: fixed;
-			top: 32px;
-			right: 0;
-			z-index: 9999;
-		}
-	}
-}
-
-.benefits {
-	margin-top: 58px;
-
-	.benefits-list-cnt {
-		padding-bottom: 90px;
+		margin: 0 0 64px;
 	}
 
-	.benefits-list {
-		flex: 1;
-	}
-
-	.capsule-image {
-		margin: 0 130px;
-
-		img {
-			display: block;
-			margin: 0 auto;
-		}
-	}
-
-	.benefits-list {
-		color: @primary-blue;
-
-		.benefit {
-			position: relative;
-			margin-bottom: 55px;
-
-			&::after {
-				position: absolute;
-				bottom: 0;
-			}
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		&.first {
-			text-align: right;
-			padding-top: 85px;
-
-			.benefit {
-				&:first-child {
-					&::after {
-						content: url('assets/img/b-1c-1e.png');
-						left: calc(100% - 63px);
-					}
-				}
-
-				&:nth-child(2) {
-					margin-right: 6px;
-
-					&::after {
-						content: url('assets/img/b-1c-2e.png');
-						left: calc(100% - 75px);
-					}
-				}
-
-				&:nth-child(3) {
-					margin-right: 12px;
-
-					&::after {
-						content: url('assets/img/b-1c-3e.png');
-						left: calc(100% - 80px);
-					}
-				}
-
-				&:nth-child(4)::after {
-					content: url('assets/img/b-1c-4e.png');
-					left: calc(100% - 75px);
-
-				}
-			}
-
-			img {
-				margin-right: 20px;
-			}
-		}
-
-		&.second {
-			padding-top: 50px;
-
-			img {
-				margin-left: 20px;
-			}
-
-			.benefit {
-				&:first-child {
-
-					&::after {
-						content: url('assets/img/b-2c-1e.png');
-						right: calc(100% - 65px);
-					}
-				}
-
-				&:nth-child(2) {
-					margin-left: 6px;
-
-					&::after {
-						content: url('assets/img/b-2c-1e.png');
-						right: calc(100% - 55px);
-					}
-				}
-
-				&:nth-child(3) {
-					margin-left: 12px;
-
-					&::after {
-						content: url('assets/img/b-2c-2e.png');
-						right: calc(100% - 55px);
-					}
-				}
-
-				&:nth-child(4) {
-					margin-left: -6px;
-
-					&::after {
-						content: url('assets/img/b-2c-2e.png');
-						right: calc(100% - 55px);
-					}
-				}
-			}
-		}
-	}
-}
-
-.steps {
-	height: 890px;
-
-	> .container {
-		height: 100%;
-	}
-
-	.steps-content-cnt {
-		height: 100%;
-		max-width: 50%;
+	.home-top-banner {
+		color: @secondary-blue;
+		padding: 140px 0 70px;
+		height: 850px;
 		align-items: center;
 
-		.steps-list {
-			margin-bottom: 46px;
+		.caption {
+			max-width: 500px;
 
-			p {
-				color: @dark-grey;
-				font-size: 24px;
-				margin: 0 0 20px;
+			p.product-name {
+				margin: 0 0 46px;
+			}
 
-				span {
-					color: @bg-light-blue-2
-				}
-			} 
+			.slogan {
+				font-size: 60px;
+				margin: 0 0 64px;
+			}
 		}
 	}
-}
 
-.product-information {
-	margin-top: 120px;
-	background-color: #FFF9F1;
-	padding: 180px 15px;
+	.why-ecopods {
+		margin-top: 52px;
+		justify-content: flex-end;
 
-	.product-information-cnt {
-		width: 700px;
-		margin: 0 auto;
-
-		img {
-			margin: 0 auto 46px;
-		}
-
-		p {
-			font-size: 36px;
-			color: @secondary-blue;
-			margin: 0;
-			letter-spacing: 0.02em;
-		}
-
-		.button {
-			margin-top: 64px;
-		}
-	}
-}
-
-.our-customers {
-	padding: 130px 0 70px;
-	background-color: @bg-light-blue-3;
-
-	.our-customers-carousel {
-		.slick-track {
-			display: flex !important;
-		}
-
-		.slick-slide {
-			height: inherit !important;
-		}
-
-		.carousel-item {
-			padding: 76px 50px 40px;
-			position: relative;
-		}
-
-		.customer-photo {
-			border-radius: 50%;
-			position: absolute;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-
-		.testimonial {
+		a {
 			display: flex;
-			flex-direction: column;
-			margin: 0 auto;
-			height: 100%;
-			border-radius: 4px;
-			background-color: #fff;
-			padding: 46px 30px 18px 46px;
-			box-shadow: -5px 5px 40px rgba(106, 106, 106, 0.161);
+			align-items: center;
+			color: @primary-blue;
+			background: @bg-light-blue-2;
+			padding: 16px 46px;
+			font-size: 24px;
+			letter-spacing: 0.02em;
 
-			i {
-				color: @bg-light-blue;
-				margin: 0 0 12px;
-				font-size: 20px;
-			}
-			
-			.testimonial-text {
-				font-size: 20px;
+			&:hover {
 				color: @primary-blue;
-				font-family: @font-family-extra-bold;
-				margin: 0 0 12px;
 			}
 
-			.customer-name {
-				display: flex;
-				height: 100%;
-				align-items: flex-end;
-				font-size: 20px;
-				margin: 0;
+			img {
+				margin-left: 12px;
+			}
+
+			&.fixed {
+				position: fixed;
+				bottom: 40px;
+				right: 0;
+				z-index: 9999;
+			}
+		}
+	}
+
+	.benefits {
+		margin-top: 58px;
+
+		.benefits-list-cnt {
+			padding-bottom: 90px;
+		}
+
+		.benefits-list {
+			flex: 1;
+		}
+
+		.capsule-image {
+			margin: 0 130px;
+
+			img {
+				display: block;
+				margin: 0 auto;
 			}
 		}
 
-		.slick-dots {
-			margin: 0;
-			padding: 0;
-			list-style-type: none;
-			font-size: 0;
-			text-align: center;
+		.benefits-list {
+			color: @primary-blue;
 
-			li {
-				display: inline-block;
-				margin-right: 24px;
+			.benefit {
+				position: relative;
+				margin-bottom: 55px;
+
+				&::after {
+					position: absolute;
+					bottom: 0;
+				}
 
 				&:last-child {
-					margin-right: 0;
+					margin-bottom: 0;
 				}
+			}
 
-				&.slick-active,
-				&:hover {
-					button {
-						background-color: @primary-blue;
+			&.first {
+				text-align: right;
+				padding-top: 85px;
+
+				.benefit {
+					&:first-child {
+						&::after {
+							content: url('assets/img/b-1c-1e.png');
+							left: calc(100% - 63px);
+						}
+					}
+
+					&:nth-child(2) {
+						margin-right: 6px;
+
+						&::after {
+							content: url('assets/img/b-1c-2e.png');
+							left: calc(100% - 75px);
+						}
+					}
+
+					&:nth-child(3) {
+						margin-right: 12px;
+
+						&::after {
+							content: url('assets/img/b-1c-3e.png');
+							left: calc(100% - 80px);
+						}
+					}
+
+					&:nth-child(4)::after {
+						content: url('assets/img/b-1c-4e.png');
+						left: calc(100% - 75px);
+
 					}
 				}
 
-				button {
-					font-size: 0;
-					background-color: transparent;
-					border: 1px solid @primary-blue;
-					border-radius: 50%;
-					width: 10px;
-					height: 10px;
-					padding: 0;
-					transition: .5s;
+				img {
+					margin-right: 20px;
+				}
+			}
+
+			&.second {
+				padding-top: 50px;
+
+				img {
+					margin-left: 20px;
+				}
+
+				.benefit {
+					&:first-child {
+
+						&::after {
+							content: url('assets/img/b-2c-1e.png');
+							right: calc(100% - 65px);
+						}
+					}
+
+					&:nth-child(2) {
+						margin-left: 6px;
+
+						&::after {
+							content: url('assets/img/b-2c-1e.png');
+							right: calc(100% - 55px);
+						}
+					}
+
+					&:nth-child(3) {
+						margin-left: 12px;
+
+						&::after {
+							content: url('assets/img/b-2c-2e.png');
+							right: calc(100% - 55px);
+						}
+					}
+
+					&:nth-child(4) {
+						margin-left: -6px;
+
+						&::after {
+							content: url('assets/img/b-2c-2e.png');
+							right: calc(100% - 55px);
+						}
+					}
 				}
 			}
 		}
-
-		.slick-arrow {
-			border: none;
-			background-color: transparent;
-			padding: 0;
-			position: absolute;
-			top: 50%;
-			z-index: 1000;
-
-			img {
-				height: 28px;
-			}
-
-			&.slick-prev {
-				right: 100%;
-			}
-
-			&.slick-next {
-				left: 100%;
-			}
-		}
 	}
-}
 
-.white-gradient {
-	height: 112px;
-	margin-top: 120px;
-	background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.44) 7.14%);
-}
+	.steps {
+		height: 890px;
 
-.our-values {
-	color: #fff;
-	height: 800px;
-	padding-bottom: 130px;
-
-	> .container {
-		height: 100%;
-
-		.our-values-content-cnt {
+		> .container {
 			height: 100%;
-			align-items: flex-end;
+		}
 
-			.section-content {
-				max-width: 460px;
+		.steps-content-cnt {
+			height: 100%;
+			max-width: 50%;
+			align-items: center;
 
-				.our-values-title {
-					color: inherit;
-					margin: 0 0 46px;
+			.steps-list {
+				margin-bottom: 46px;
+
+				p {
+					color: @dark-grey;
+					font-size: 24px;
+					margin: 0 0 20px;
+
+					span {
+						color: @secondary-blue;
+						font-family: @font-family-extra-bold;
+					}
+				} 
+			}
+		}
+	}
+
+	.product-information {
+		margin-top: 120px;
+		background-color: #FFF9F1;
+		padding: 180px 15px;
+
+		.product-information-cnt {
+			width: 700px;
+			margin: 0 auto;
+
+			img {
+				margin: 0 auto 46px;
+			}
+
+			p {
+				font-size: 36px;
+				color: @secondary-blue;
+				margin: 0;
+				letter-spacing: 0.02em;
+			}
+
+			.button {
+				margin-top: 64px;
+			}
+		}
+	}
+
+	.our-customers {
+		padding: 95px 0;
+		background-color: @bg-light-blue-3;
+
+		.our-customers-carousel {
+			.slick-track {
+				display: flex !important;
+			}
+
+			.slick-slide {
+				height: inherit !important;
+			}
+
+			.carousel-item {
+				padding: 76px 50px 40px;
+				position: relative;
+			}
+
+			.customer-photo {
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			.testimonial {
+				display: flex;
+				flex-direction: column;
+				margin: 0 auto;
+				height: 100%;
+				border-radius: 4px;
+				background-color: #fff;
+				padding: 46px 30px 18px 46px;
+				box-shadow: -5px 5px 40px rgba(106, 106, 106, 0.161);
+
+				i {
+					color: @bg-light-blue;
+					margin: 0 0 12px;
+					font-size: 20px;
+				}
+				
+				.testimonial-text {
+					font-size: 20px;
+					color: @primary-blue;
+					font-family: @font-family-extra-bold;
+					margin: 0 0 12px;
 				}
 
-				.our-values-description {
-					margin: 0 0 32px;
-					font-size: 24px;
+				.customer-name {
+					display: flex;
+					height: 100%;
+					align-items: flex-end;
+					font-size: 20px;
+					margin: 0;
+				}
+			}
+
+			.slick-dots {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				font-size: 0;
+				text-align: center;
+
+				li {
+					display: inline-block;
+					margin-right: 24px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					&.slick-active,
+					&:hover {
+						button {
+							background-color: @primary-blue;
+						}
+					}
+
+					button {
+						font-size: 0;
+						background-color: transparent;
+						border: 1px solid @primary-blue;
+						border-radius: 50%;
+						width: 10px;
+						height: 10px;
+						padding: 0;
+						transition: .5s;
+					}
+				}
+			}
+
+			.slick-arrow {
+				border: none;
+				background-color: transparent;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				z-index: 1000;
+
+				img {
+					height: 28px;
+				}
+
+				&.slick-prev {
+					right: 100%;
+				}
+
+				&.slick-next {
+					left: 100%;
 				}
 			}
 		}
 	}
-}
 
-.products {
-	padding: 120px 0 100px;
+	.white-gradient {
+		height: 112px;
+		background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.44) 7.14%);
+	}
 
-	.products-container {
-		justify-content: center;
+	.our-values {
+		color: #fff;
+		height: 800px;
+		padding-bottom: 130px;
 
-		.product-item {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			flex: 0 0 33%;
-			text-align: center;
-			margin: 0 0 64px;
+		> .container {
+			height: 100%;
 
-			img {
-				max-width: 240px;
-				display: block;
-				margin: 0 auto 32px;
+			.our-values-content-cnt {
+				height: 100%;
+				align-items: flex-end;
+
+				.section-content {
+					max-width: 460px;
+
+					.our-values-title {
+						color: inherit;
+						margin: 0 0 46px;
+					}
+
+					.our-values-description {
+						margin: 0 0 32px;
+						font-size: 24px;
+					}
+				}
 			}
+		}
+	}
 
-			span {
-				font-size: 32px;
-				color: @primary-blue;
+	.products {
+		padding: 120px 0 100px;
+
+		.products-container {
+			justify-content: center;
+
+			.product-item {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				flex: 0 0 33%;
+				text-align: center;
+				margin: 0 0 64px;
+
+				img {
+					max-width: 240px;
+					display: block;
+					margin: 0 auto 32px;
+				}
+
+				span {
+					font-size: 32px;
+					color: @primary-blue;
+				}
 			}
 		}
 	}

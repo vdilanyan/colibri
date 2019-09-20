@@ -12,9 +12,16 @@ $(document).ready(function() {
 		nextArrow: '<button class="slick-next slick-arrow"><img src="' + wp_var.template_dir + '/assets/img/arrow-left.png"></button>',
 		adaptiveHeight: true,
 	});
-
+	
 	$('.nav-main a[href="#"]').click(function(e) {
 		e.preventDefault();
+	});
+
+	$('.accordion-heading a').click(function() {
+		$('.accordion-element').removeClass('active');
+		if(!$(this).closest('.panel').find('.panel-collapse').hasClass('in')) {
+			$(this).parents('.accordion-element').addClass('active');
+		}
 	});
 });
 
@@ -25,12 +32,12 @@ $(window).load(function() {
 if (whyEcopodsBtn.length) {
 	var btn = whyEcopodsBtn.find('a');
 	var btnHeight = btn.outerHeight();
-	var btnOffsetTop = btn.offset().top - 32;
+	var btnOffsetBottom = btn.offset().top + btnHeight;
 
 	$(window).scroll(function() {
-		var windowScrollTop = $(this).scrollTop();
-		console.log(btnHeight);
-		if (windowScrollTop > btnOffsetTop) {
+		var windowScrollTop = $(this).scrollTop() + $(this).outerHeight() - 40;
+
+		if (windowScrollTop >= btnOffsetBottom) {
 			whyEcopodsBtn.height(btnHeight);
 			btn.addClass('fixed');
 		} else {
