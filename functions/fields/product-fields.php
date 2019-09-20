@@ -10,8 +10,16 @@ $product_fields
 		'return_format' => 'url',
 	])
 	->setRequired()
+	->addImage('homepage_image_hover', [
+		'return_format' => 'url',
+	])
+	->setRequired()
 
 	->addImage('products_page_image', [
+		'return_format' => 'url',
+	])
+	->setRequired()
+	->addImage('products_page_image_hover', [
 		'return_format' => 'url',
 	])
 	->setRequired()

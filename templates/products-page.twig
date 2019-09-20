@@ -8,6 +8,7 @@
 			{% for product in products_page.products %}
 				<a href="{{ product.link }}" title="{{ product.title }}" class="product-list-item list-item">
 					<img src="{{ product.get_field('products_page_image') }}" alt="{{ product.title }}">
+					<img src="{{ product.get_field('products_page_image_hover') }}" class="hover-state" alt="{{ product.title }}">
 					<span>{{ product.title }}</span>
 				</a>
 			{% endfor %}

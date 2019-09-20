@@ -17,13 +17,35 @@
 		}
 
 		.product-list-item {
+			position: relative;
 			flex-direction: column;
 			justify-content: space-between;
 			text-align: center;
+			overflow: hidden;
+
+			&:hover {
+				img {
+					transform: translateX(-100%);
+
+					&.hover-state {
+						transform: translateX(0);
+					}
+				}
+			}
 
 			img {
 				display: block;
 				margin: 0 auto 24px;
+				transition: .25s;
+
+				&.hover-state {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					margin: 0 auto;
+					transform: translateX(100%);
+				}
 			}
 
 			span {

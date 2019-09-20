@@ -108,6 +108,7 @@
 			{% for product in home.products %}
 				<a href="{{ product.link }}" title="{{ product.title }}" class="product-item">
 					<img src="{{ product.get_field('homepage_image') }}" alt="{{ product.title }}">
+					<img class="hover-state" src="{{ product.get_field('homepage_image_hover') }}" alt="{{ product.title }}">
 					<span>{{ product.title }}</span>
 				</a>
 			{% endfor %}
@@ -138,7 +139,7 @@
 
 <section class="white-gradient"></section>
 
-<section class="our-values" style="background: #211B56 url({{ home.ov_image }}) no-repeat center/cover;">
+<section class="our-values" style="background: #211B56 url({{ home.ov_image }}) no-repeat top center/cover;">
 	<div class="container">
 		<div class="flex-container our-values-content-cnt">
 			<div class="section-content">
