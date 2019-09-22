@@ -70,7 +70,7 @@ body {
 	padding-bottom: 40px;
 }
 
-.button {
+.colibri-button {
 	display: inline-block;
 	padding: 14px 32px;
 	border-radius: 4px;
@@ -78,28 +78,30 @@ body {
 	font-size: 20px;
 	letter-spacing: 0.04em;
 	transition: .5s;
-}
 
-.button-primary {
-	color: @secondary-blue;
-	background: @bg-light-blue;
-
-	&:hover {
+	&.button-primary {
 		color: @secondary-blue;
-		box-shadow: 0px 0px 20px @bg-light-blue;
+		background: @bg-light-blue;
+
+		&:hover {
+			color: @secondary-blue;
+			box-shadow: 0px 0px 20px @bg-light-blue;
+		}
 	}
-}
 
-.button-secondary {
-	color: @primary-blue;
-	background: #fff;
-	box-shadow: 0px 10px 20px rgba(224, 224, 224, 0.35);
-
-	&:hover {
+	&.button-secondary {
 		color: @primary-blue;
-		box-shadow: 0px 0px 20px @bg-light-blue;
+		background: #fff;
+		box-shadow: 0px 10px 20px rgba(224, 224, 224, 0.35);
+
+		&:hover {
+			color: @primary-blue;
+			box-shadow: 0px 0px 20px @bg-light-blue;
+		}
 	}
 }
+
+
 
 .h1-lg {
 	font-size: @font-size-large;

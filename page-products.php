@@ -9,7 +9,6 @@ $product_args = [
 	'order' => 'ASC',
 ];
 
-
 $context['products_page'] = [
 	'products' => Timber::get_posts($product_args),
 	'product_information' => get_field('product_information'),

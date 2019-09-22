@@ -1,5 +1,7 @@
 var $ = jQuery;
 var whyEcopodsBtn = $('.why-ecopods');
+var productGallery = $('.product-gallery-small .img-container');
+var productGalleryThumb = $('.product-gallery .product-thumb');
 
 $(document).ready(function() {
 	$('.our-customers-carousel').slick({
@@ -23,6 +25,14 @@ $(document).ready(function() {
 			$(this).parents('.accordion-element').addClass('active');
 		}
 	});
+
+	if (productGallery.length) {
+		productGallery.click(function() {
+			productGallery.removeClass('active');
+			$(this).addClass('active');
+			productGalleryThumb.attr('src', $(this).data('url'));
+		});
+	}
 });
 
 $(window).load(function() {

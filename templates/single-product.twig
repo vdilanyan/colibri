@@ -1,0 +1,146 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+<section class="product-info">
+	<div class="container">
+		<div class="flex-container">
+			{% if single_product.gallery %}
+				<div class="product-gallery">
+					<div class="product-thumb-cnt">
+						<img src="{{ single_product.gallery[0] }}" class="product-thumb" alt="">
+					</div>
+
+					<div class="product-gallery-small">
+						{% for image in single_product.gallery %}
+							<div
+								class="img-container {{ loop.first ? 'active' }}"
+								style="background: url({{ image }}) no-repeat center/cover;"
+								data-url="{{ image }}"
+							>		
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+			<div class="product-content">
+				<h1 class="product-title font-extra-bold">{{ single_product.post.post_title }}</h1>
+				<p class="product-description">{{ single_product.post.post_content }}</p>
+				{% if single_product.product_features %}
+					<p class="product-features-title">
+						{{ __("Product Features", "colibri") }}
+					</p>
+					<ul class="product-features">
+						{% for feature in single_product.product_features %}
+							<li>
+								<img src="{{ theme.path }}/assets/img/checkmark.png">
+								{{ feature.feature }}
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+				{% if single_product.button_name is not empty %}
+					<a href="{{ single_product.button_link }}" class="colibri-button button-primary wtb-button" title="{{ single_product.button_name }}">
+						{{ single_product.button_name }}
+					</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
+
+{% if single_product.tabs %}
+	<section class="info-tabs">
+		<ul class="tabs-nav text-center">
+			{% for tab in single_product.tabs %}
+				<li class="{{ loop.first ? 'active' }}">
+					<a data-toggle="tab" href="#tab-{{ loop.index }}">
+						{{ tab.tab_title }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+		<div class="tab-content">
+			{% for tab in single_product.tabs %}
+				<div id="tab-{{ loop.index }}" class="tab-pane fade {{ loop.first ? 'in active' }}">
+					{{ tab.tab_content }}
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+{% endif %}
+
+{% if single_product.how_it_works %}
+	<section class="how-it-works">
+		<div class="container">
+			<p class="how-it-works-title section-title-small">
+				{{ __("How it works", "colibri") }}
+			</p>
+
+			<div class="flex-container">
+				{% for step in single_product.how_it_works %}
+					<div class="hiw-step">
+						<img src="{{ step.image }}" alt="{{ step.step }}">
+						<p class="step-text font-extra-bold text-center">{{ step.step }}</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+
+{% if single_product.faqs %}
+	<section class="faqs">
+		<div class="container">
+			{{ single_product.faqs_title ?
+				'<p class="section-title-small">' ~ single_product.faqs_title ~ '</p>'
+			}}
+
+			<div class="panel-group" id="faq-accordion">
+				{% for faqs in single_product.faqs %}
+					<div class="accordion-element panel panel-default">
+						<img src="{{ theme.path }}/assets/img/frame.png" alt="faq-frame" class="faq-frame">
+						{% for faq in faqs %}
+							<div class="accordion-heading">
+								<a data-toggle="collapse" data-parent="#faq-accordion" href="#collapse-{{ faq.ID }}">
+									{{ faq.post_title }}
+								</a>
+							</div>
+							<div id="collapse-{{ faq.ID }}" class="panel-collapse collapse">
+								<div class="accordion-body">
+									{{ faq.post_content }}
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% if single_product.full_width_image %}
+	<div class="product-full-width-image" style="background: url({{ single_product.full_width_image }}) no-repeat center/cover;"></div>
+{% endif %}
+
+{% if single_product.other_products %}
+	<section class="other-products">
+		<div class="container">
+			<p class="how-it-works-title section-title-small">
+				{{ __("Other Cleaning products", "colibri") }}
+			</p>
+
+			<div class="other-products-list flex-container">
+				{% for product in single_product.other_products %}
+					<a href="{{ product.link }}" title="{{ product.title }}" class="product-list-item text-center">
+						<img src="{{ product.get_field('products_page_image') }}" alt="{{ product.title }}">
+						<span>{{ product.title }}</span>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% endblock %}

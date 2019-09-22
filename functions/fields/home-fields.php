@@ -1,7 +1,7 @@
 <?php
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-const LEAVE_EMPTY = "Leave empty to disable.";
+const LEAVE_EMPTY = 'Leave epmty to disable.';
 
 $benefits = new FieldsBuilder('benefits_list');
 $benefits
