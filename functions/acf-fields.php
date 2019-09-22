@@ -14,3 +14,4 @@ require_once('fields/home-fields.php');
 require_once('fields/product-fields.php');
 require_once('fields/products-page-fields.php');
 require_once('fields/theme-settings-fields.php');
+require_once('fields/how-it-works.php');

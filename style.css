@@ -97,6 +97,12 @@ body {
   color: #211B56;
   box-shadow: 0px 0px 20px #A9DDFF;
 }
+.page-title {
+  font-size: 64px;
+  letter-spacing: 0.04em;
+  color: #211B56;
+  text-align: center;
+}
 .h1-lg {
   font-size: 64px;
 }
@@ -973,5 +979,126 @@ body.home .products .products-container .product-item span {
 }
 .single-product .other-products .other-products-list .product-list-item span {
   font-size: 16px;
+  color: #211B56;
+}
+.page-template-how-it-works .top-content {
+  margin-top: 64px;
+}
+.page-template-how-it-works .top-content .page-title {
+  margin: 0 0 46px;
+}
+.page-template-how-it-works .top-content .page-sub-title {
+  margin: 0 0 20px;
+  color: #211B56;
+  letter-spacing: 0.04em;
+  font-size: 18px;
+}
+.page-template-how-it-works .top-content .page-description {
+  color: #211B56;
+  letter-spacing: 0.04em;
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 555px;
+  margin: 0 auto;
+}
+.page-template-how-it-works .top-content .page-description span {
+  font-family: "Gilroy-ExtraBold", sans-serif;
+}
+.page-template-how-it-works .how-its-made {
+  margin-top: 80px;
+}
+.page-template-how-it-works .how-its-made .how-its-made-content {
+  padding: 0 125px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.page-template-how-it-works .how-its-made .how-its-made-content img {
+  max-width: 170px;
+  margin-right: 105px;
+}
+.page-template-how-it-works .how-its-made .how-its-made-content .how-its-made-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.page-template-how-it-works .how-its-made .how-its-made-content .how-its-made-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 64px;
+}
+.page-template-how-it-works .how-its-made .how-its-made-content .how-its-made-list li:last-child {
+  margin: 0;
+}
+.page-template-how-it-works .how-its-made .how-its-made-content .how-its-made-list li img {
+  margin-right: 40px;
+}
+.page-template-how-it-works .how-its-made .how-its-made-content .how-its-made-list li p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #211B56;
+}
+.page-template-how-it-works .how-its-made .how-its-made-content .how-its-made-list li p span {
+  font-family: "Gilroy-ExtraBold", sans-serif;
+}
+.page-template-how-it-works .how-it-works {
+  margin-top: 80px;
+}
+.page-template-how-it-works .how-it-works .flex-container {
+  justify-content: center;
+}
+.page-template-how-it-works .how-it-works .flex-container .hiw-step {
+  width: 200px;
+  margin: 0 30px;
+}
+.page-template-how-it-works .how-it-works .flex-container .hiw-step:first-child {
+  margin-left: 0;
+}
+.page-template-how-it-works .how-it-works .flex-container .hiw-step:last-child {
+  margin-right: 0;
+}
+.page-template-how-it-works .how-it-works .flex-container .hiw-step img {
+  display: block;
+}
+.page-template-how-it-works .how-it-works .flex-container .hiw-step .step-text {
+  font-size: 24px;
+  color: #A9DDFF;
+  margin: 24px 0 0;
+}
+.page-template-how-it-works .before-now {
+  margin-top: 120px;
+  padding-bottom: 60px;
+}
+.page-template-how-it-works .before-now .section-title-small {
+  max-width: 546px;
+  margin: 0 auto 46px;
+}
+.page-template-how-it-works .before-now .flex-container {
+  justify-content: center;
+}
+.page-template-how-it-works .before-now .flex-container .section-column {
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  margin: 0 100px;
+}
+.page-template-how-it-works .before-now .flex-container .section-column p {
+  font-size: 18px;
+  margin: 0 0 46px;
+}
+.page-template-how-it-works .before-now .flex-container .section-column img {
+  margin: auto;
+}
+.page-template-how-it-works .slogan-section {
+  height: 400px;
+  padding: 62px 0 0;
+  margin-top: 60px;
+}
+.page-template-how-it-works .slogan-section .container p {
+  font-size: 24px;
+  line-height: 46px;
+  letter-spacing: 0.04em;
+  margin: 0;
   color: #211B56;
 }

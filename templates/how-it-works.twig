@@ -1,0 +1,81 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+<section class="top-content">
+	<div class="container">
+		<h1 class="page-title font-extra-bold">{{ how_it_works.page_title }}</h1>
+		{{ how_it_works.page_sub_title ?
+			"<p class='page-sub-title text-uppercase text-center'>" ~ how_it_works.page_sub_title ~ "</p>"
+		}}
+		{{ how_it_works.page_description ?
+			"<p class='page-description text-center'>" ~ how_it_works.page_description ~ "</p>"
+		}}
+	</div>
+</section>
+
+<section class="how-its-made">
+	<div class="container">
+		<div class="flex-container how-its-made-content">
+			{{ how_it_works.product_image ?
+				"<img src='" ~ how_it_works.product_image ~ "' alt=''>"
+			}}
+
+			<ul class="how-its-made-list">
+				{% for item in how_it_works.how_its_made %}
+					<li>
+						<img src="{{ item.icon }}" alt="">
+						<p>{{ item.him_info }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>
+
+{% if how_it_works.how_it_works %}
+	<section class="how-it-works">
+		<div class="container">
+			<p class="how-it-works-title section-title-small">
+				{{ __("How it works", "colibri") }}
+			</p>
+
+			<div class="flex-container">
+				{% for step in how_it_works.how_it_works %}
+					<div class="hiw-step">
+						<img src="{{ step.image }}" alt="{{ step.step }}">
+						<p class="step-text font-extra-bold text-center">{{ step.step }}</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+<section class="before-now">
+	<div class="container">
+		<h1 class="section-title-small">{{ how_it_works.bn_title }}</h1>
+		<div class="flex-container">
+			<div class="section-column">
+				<p class="text-center">{{ __("before", "colibri") }}</p>
+				<img src="{{ how_it_works.before_image }}" alt="before">
+			</div>
+			<div class="section-column">
+				<p class="text-center">{{ __("now", "colibri") }}</p>
+				<img src="{{ how_it_works.after_image }}" alt="now">
+			</div>
+		</div>
+	</div>
+</section>
+
+{% if how_it_works.full_width_image %}
+	<section class="slogan-section" style="background: url('{{ how_it_works.full_width_image }}') no-repeat top center/cover;">
+		{% if how_it_works.slogan_text %}
+			<div class="container text-right">
+				<p>{{ how_it_works.slogan_text }}</p>
+			</div>
+		{% endif %}
+	</section>
+{% endif %}
+
+{% endblock %}
