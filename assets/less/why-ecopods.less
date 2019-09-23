@@ -1,0 +1,147 @@
+.page-template-why-ecopods {
+	.top-banner {
+		margin-top: 80px;
+		position: relative;
+		overflow: hidden;
+
+		.water-image {
+			height: 258px;
+			position: relative;
+			z-index: 10;
+		}
+
+		.water-gradient {
+			position: relative;
+			z-index: 10;
+			padding: 340px 0 440px;
+			background: linear-gradient(180deg, #95D7ED 0%, rgba(214, 242, 252, 0) 100%);
+
+			.top-banner-text {
+				color: @primary-blue;
+				font-size: 64px;
+				line-height: 74px;
+			}
+		}
+
+		.parallax-img {
+			position: absolute;
+			z-index: 20;
+
+			&.bottle {
+				top: 40%;
+				left: 200px;
+				transition: 1.5s;
+			}
+
+			&.bottle1 {
+				top: 340px;
+				right: 90px;
+				transition: 2.5s;
+				z-index: 9;
+			}
+
+			&.plastic-bag {
+				top: 225px;
+				left: 400px;
+				transition: 1.8s;
+			}
+
+			&.bin {
+				left: 40%;
+				top: 40%;
+				transition: 3s;
+			}
+
+			&.seahorse {
+				bottom: 200px;
+				right: 325px;
+				transition: 3.5s;
+			}
+
+			&.straw {
+				top: 300px;
+				left: 45%;
+				transition: 2s;
+			}
+
+			&.toothbrush {
+				top: 45%;
+				right: 450px;
+				transition: 1.5s;
+			}
+
+			&.tuna-fish {
+				top: 55px;
+				left: 250px;
+				transition: 4s;
+				z-index: 9;
+			}
+
+			&.water-bottle {
+				top: 55%;
+				right: 450px;
+				transition: 1.5s;
+			}
+		}
+	}
+
+	.avoid-plastic {
+		margin-top: 30px;
+
+		.avoid-plastic-title {
+			color: @primary-blue;
+			font-size: 64px;
+			line-height: 80px;
+			letter-spacing: 0.04em;
+			margin: 0 0 64px;
+		}
+
+		.avoid-plastic-description {
+			color: @primary-blue;
+			letter-spacing: 0.04em;
+			margin-bottom: 55px;
+		}
+
+		.avoid-plastic-steps {
+			max-width: 920px;
+			margin: 0 auto 80px;
+
+			.step {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 110px;
+
+				&:nth-child(even) {
+					flex-direction: row-reverse;
+				}
+
+				.content {
+					.step-title {
+						color: @primary-blue;
+						font-size: 48px;
+						line-height: 55px;
+						letter-spacing: 0.04em;
+						margin: 0 0 24px;
+					}
+
+					.step-description {
+						color: @primary-blue;
+						line-height: 32px;
+						letter-spacing: 0.04em;
+						margin: 0;
+						width: 385px;
+					}
+				}
+
+				img {
+					max-width: 310px;
+				}
+			}
+		}
+	}
+
+	.footer-image {
+		height: 400px;
+	}
+}

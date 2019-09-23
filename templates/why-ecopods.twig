@@ -1,0 +1,48 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+<section class="top-banner">
+	<div class="water-image" style="background: url({{ why_ecopods.top_banner_image }}) no-repeat top center/cover;"></div>
+	<div class="water-gradient">
+		<p class="top-banner-text text-center">
+			{{ why_ecopods.top_banner_text }}
+		</p>
+	</div>
+	<img src="{{ theme.path }}/assets/img/parallax/bottle.png" alt="bottle" class="parallax-img bottle">
+	<img src="{{ theme.path }}/assets/img/parallax/bottle1.png" alt="bottle" class="parallax-img bottle1">
+	<img src="{{ theme.path }}/assets/img/parallax/plastic-bag.png" alt="plastic bag" class="parallax-img plastic-bag">
+	<img src="{{ theme.path }}/assets/img/parallax/bin.png" alt="bin" class="parallax-img bin">
+	<img src="{{ theme.path }}/assets/img/parallax/seahorse.png" alt="seahorse" class="parallax-img seahorse">
+	<img src="{{ theme.path }}/assets/img/parallax/straw.png" alt="straw" class="parallax-img straw">
+	<img src="{{ theme.path }}/assets/img/parallax/toothbrush.png" alt="toothbrush" class="parallax-img toothbrush">
+	<img src="{{ theme.path }}/assets/img/parallax/tuna-fish.png" alt="tuna fish" class="parallax-img tuna-fish">
+	<img src="{{ theme.path }}/assets/img/parallax/water-bottle.png" alt="bottle" class="parallax-img water-bottle">
+</section>
+
+<section class="avoid-plastic">
+	<div class="container">
+		<p class="avoid-plastic-title font-extra-bold text-center">{{ why_ecopods.avoid_plastic_title }}</p>
+		{{ why_ecopods.avoid_plastic_description ?
+			'<p class="avoid-plastic-description font-extra-bold text-center">' ~ why_ecopods.avoid_plastic_description ~ '</p>'
+		}}
+
+		<div class="avoid-plastic-steps">
+			{% for step in why_ecopods.avoid_plastic_steps %}
+				<div class="step">
+					<div class="content">
+						<p class="step-title">{{ step.title }}</p>
+						<p class="step-description">{{ step.description }}</p>
+					</div>
+					<img src="{{ step.image }}" alt="{{ step.title }}">
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+{% if why_ecopods.page_footer_image %}
+	<section class="footer-image" style="background: url({{ why_ecopods.page_footer_image }}) no-repeat center/cover;"></section>
+{% endif %}
+
+{% endblock %}

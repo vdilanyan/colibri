@@ -160,7 +160,7 @@ header .header-nav-bar .nav-main > li a {
   color: #211B56;
   position: relative;
 }
-header .header-nav-bar .nav-main > li a:not([href="#"])::after {
+header .header-nav-bar .nav-main > li a::after {
   content: '';
   height: 3px;
   background: #211B56;
@@ -172,10 +172,11 @@ header .header-nav-bar .nav-main > li a:not([href="#"])::after {
   transition: 0.5s;
   transform: scaleX(0);
 }
-header .header-nav-bar .nav-main > li a:hover::after {
+header .header-nav-bar .nav-main > li a:not([href="#"]):hover::after {
   transform: scaleX(1);
 }
-header .header-nav-bar .nav-main > li.current-menu-item a::after {
+header .header-nav-bar .nav-main > li.current-menu-item a::after,
+header .header-nav-bar .nav-main > li.current-menu-ancestor > a::after {
   transform: scaleX(1);
 }
 header .header-nav-bar .nav-main > li .nav-drop-cnt {
@@ -1101,4 +1102,127 @@ body.home .products .products-container .product-item span {
   letter-spacing: 0.04em;
   margin: 0;
   color: #211B56;
+}
+.page-template-why-ecopods .top-banner {
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+.page-template-why-ecopods .top-banner .water-image {
+  height: 258px;
+  position: relative;
+  z-index: 10;
+}
+.page-template-why-ecopods .top-banner .water-gradient {
+  position: relative;
+  z-index: 10;
+  padding: 340px 0 440px;
+  background: linear-gradient(180deg, #95D7ED 0%, rgba(214, 242, 252, 0) 100%);
+}
+.page-template-why-ecopods .top-banner .water-gradient .top-banner-text {
+  color: #211B56;
+  font-size: 64px;
+  line-height: 74px;
+}
+.page-template-why-ecopods .top-banner .parallax-img {
+  position: absolute;
+  z-index: 20;
+}
+.page-template-why-ecopods .top-banner .parallax-img.bottle {
+  top: 40%;
+  left: 200px;
+  transition: 1.5s;
+}
+.page-template-why-ecopods .top-banner .parallax-img.bottle1 {
+  top: 340px;
+  right: 90px;
+  transition: 2.5s;
+  z-index: 9;
+}
+.page-template-why-ecopods .top-banner .parallax-img.plastic-bag {
+  top: 225px;
+  left: 400px;
+  transition: 1.8s;
+}
+.page-template-why-ecopods .top-banner .parallax-img.bin {
+  left: 40%;
+  top: 40%;
+  transition: 3s;
+}
+.page-template-why-ecopods .top-banner .parallax-img.seahorse {
+  bottom: 200px;
+  right: 325px;
+  transition: 3.5s;
+}
+.page-template-why-ecopods .top-banner .parallax-img.straw {
+  top: 300px;
+  left: 45%;
+  transition: 2s;
+}
+.page-template-why-ecopods .top-banner .parallax-img.toothbrush {
+  top: 45%;
+  right: 450px;
+  transition: 1.5s;
+}
+.page-template-why-ecopods .top-banner .parallax-img.tuna-fish {
+  top: 55px;
+  left: 250px;
+  transition: 4s;
+  z-index: 9;
+}
+.page-template-why-ecopods .top-banner .parallax-img.water-bottle {
+  top: 55%;
+  right: 450px;
+  transition: 1.5s;
+}
+.page-template-why-ecopods .avoid-plastic {
+  margin-top: 30px;
+}
+.page-template-why-ecopods .avoid-plastic .avoid-plastic-title {
+  color: #211B56;
+  font-size: 64px;
+  line-height: 80px;
+  letter-spacing: 0.04em;
+  margin: 0 0 64px;
+}
+.page-template-why-ecopods .avoid-plastic .avoid-plastic-description {
+  color: #211B56;
+  letter-spacing: 0.04em;
+  margin-bottom: 55px;
+}
+.page-template-why-ecopods .avoid-plastic .avoid-plastic-steps {
+  max-width: 920px;
+  margin: 0 auto 80px;
+}
+.page-template-why-ecopods .avoid-plastic .avoid-plastic-steps .step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 110px;
+}
+.page-template-why-ecopods .avoid-plastic .avoid-plastic-steps .step:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.page-template-why-ecopods .avoid-plastic .avoid-plastic-steps .step .content .step-title {
+  color: #211B56;
+  font-size: 48px;
+  line-height: 55px;
+  letter-spacing: 0.04em;
+  margin: 0 0 24px;
+}
+.page-template-why-ecopods .avoid-plastic .avoid-plastic-steps .step .content .step-description {
+  color: #211B56;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  margin: 0;
+  width: 385px;
+}
+.page-template-why-ecopods .avoid-plastic .avoid-plastic-steps .step img {
+  max-width: 310px;
+}
+.page-template-why-ecopods .footer-image {
+  height: 400px;
+}
+.contact-page {
+  margin-top: 80px;
 }

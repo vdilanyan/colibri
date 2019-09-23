@@ -44,7 +44,7 @@ header {
 					color: @primary-blue;
 					position: relative;
 
-					&:not([href="#"])::after {
+					&::after {
 						content: '';
 						height: 3px;
 						background: @primary-blue;
@@ -57,14 +57,15 @@ header {
 						transform: scaleX(0);
 					}
 
-					&:hover {
+					&:not([href="#"]):hover {
 						&::after {
 							transform: scaleX(1);
 						}
 					}
 				}
 
-				&.current-menu-item a::after {
+				&.current-menu-item a::after,
+				&.current-menu-ancestor > a::after {
 					transform: scaleX(1);
 				}
 

@@ -2,6 +2,7 @@ var $ = jQuery;
 var whyEcopodsBtn = $('.why-ecopods');
 var productGallery = $('.product-gallery-small .img-container');
 var productGalleryThumb = $('.product-gallery .product-thumb');
+var whyEcopodsBanner = $('.page-template-why-ecopods .top-banner');
 
 $(document).ready(function() {
 	$('.our-customers-carousel').slick({
@@ -39,12 +40,11 @@ $(window).load(function() {
 
 });
 
-if (whyEcopodsBtn.length) {
-	var btn = whyEcopodsBtn.find('a');
-	var btnHeight = btn.outerHeight();
-	var btnOffsetBottom = btn.offset().top + btnHeight;
-
-	$(window).scroll(function() {
+$(window).scroll(function() {
+	if (whyEcopodsBtn.length) {
+		var btn = whyEcopodsBtn.find('a');
+		var btnHeight = btn.outerHeight();
+		var btnOffsetBottom = btn.offset().top + btnHeight;
 		var windowScrollTop = $(this).scrollTop() + $(this).outerHeight() - 40;
 
 		if (windowScrollTop >= btnOffsetBottom) {
@@ -54,5 +54,15 @@ if (whyEcopodsBtn.length) {
 			btn.removeClass('fixed');
 			whyEcopodsBtn.removeAttr('style');
 		}
-	});
-}
+	}
+
+	if (whyEcopodsBanner.length) {
+		var windowScrollTop = $(this).scrollTop() - whyEcopodsBanner.outerHeight() / 3;
+		whyEcopodsBanner.find('.parallax-img').each(function() {
+			$(this).css({
+				'transform': 'translateY(' + windowScrollTop + '%)',
+				'opacity': windowScrollTop,
+			});
+		})
+	}
+});
