@@ -70,16 +70,19 @@ body {
 	padding-bottom: 40px;
 }
 
-.colibri-button {
+.colibri-button,
+.frm_button_submit {
 	display: inline-block;
 	padding: 14px 32px;
 	border-radius: 4px;
 	font-family: @font-family-extra-bold;
 	font-size: 20px;
 	letter-spacing: 0.04em;
+	border: none;
 	transition: .5s;
 
-	&.button-primary {
+	&.button-primary,
+	&[type=submit] {
 		color: @secondary-blue;
 		background: @bg-light-blue;
 

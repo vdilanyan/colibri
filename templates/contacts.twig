@@ -3,7 +3,56 @@
 {% block content %}
 
 <section class="contact-page">
-	
+	<div class="container">
+		<div class="flex-container">
+			<div class="contacts">
+				<div id="contacts-map">
+					<div class="marker" data-lat="{{ contacts.google_map['lat'] }}" data-lng="{{ contacts.google_map['lng'] }}"></div>
+				</div>
+				<div class="contact-info">
+					<div class="address">
+						<h3 class="text-uppercase font-extra-bold address-title">{{ __("address", "colibri") }}</h3>
+						<p class="company-name font-extra-bold">
+							{{ contacts.company_name }}
+						</p>
+
+						<p class="address-line">
+							{{ contacts.address }}
+						</p>
+						{% if contacts.social_links %}
+							<nav class="social-nav">
+								<h3 class="text-uppercase font-extra-bold">{{ __("follow us", "colibri") }}</h3>
+								<ul class="list-inline social-menu">
+									{% for item in contacts.social_links %}
+										<li class="social-extra-item">
+											<a class="social-extra-link" href="{{ item.link }}" target="_blank" rel="nofollow">
+												<img src="{{ item.icon }}" alt="">
+											</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</nav>
+						{% endif %}
+					</div>
+					<div class="phone">
+						<h3 class="text-uppercase font-extra-bold">{{ __("telephone", "colibri") }}</h3>
+						<p class="general-enquiries">
+							 {{ __("General Enquiries", "colibri") }}: {{ contacts.general_enquiries }}
+						</p>
+						<p class="technical-enquiries">
+							{{ __("Technical Enquiries", "colibri") }}: {{ contacts.technical_enquiries }}
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="contact-form-cnt">
+				<div class="contact-form">
+					<p class="form-title text-center">{{ __("Send us a message!", "colibri") }}</p>
+					{{ function('do_shortcode', '[formidable id=' ~ contacts.form_id ~ ']') }}
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 {% endblock %}

@@ -1,3 +1,127 @@
-.contact-page {
-	margin-top: 80px;
+.page-template-contacts {
+	.contact-page {
+		margin: 80px 0 70px;
+
+		.flex-container {
+			justify-content: space-between;
+
+			.contacts {
+				flex: 1;
+				margin-right: 30px;
+
+				#contacts-map {
+					width: 100%;
+					height: 375px;
+
+					img {
+						max-width: inherit !important;
+					}
+				}
+			}
+
+			.contact-form-cnt {
+				flex: 1;
+				margin-left: 30px;
+				width: 570px;
+			}
+
+			.contact-form {
+				padding: 32px 86px 54px;
+				background-color: #fff;
+				box-shadow: 0px 4px 20px rgba(141, 141, 141, .35);
+
+				.form-field {
+					position: relative;
+
+					.frm_error {
+						position: absolute;
+						left: 0;
+						top: calc(100% + 5px);
+					}
+				}
+
+				.frm_error_style {
+					margin-bottom: 32px;
+				}
+
+				.frm_submit {
+					text-align: center;
+				}
+
+				.form-title {
+					font-family: @font-family-source-sans-pro;
+					font-size: 30px;
+					line-height: 38px;
+					color: @black-80;
+					margin: 0 0 46px;
+				}
+			}
+		}
+
+		.contact-info {
+			display: flex;
+			padding-top: 36px;
+			justify-content: flex-end;
+
+			.address {
+				max-width: 220px;
+			}
+
+			h3 {
+				margin: 0 0 24px;
+				font-size: 24px;
+				line-height: 28px;
+				color: @primary-blue;
+				letter-spacing: 0.08em;
+
+				&.address-title {
+					margin: 0 0 8px;
+				}
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 24px;
+				color: @darker-grey;
+				margin: 0;
+
+				&.company-name {
+					color: @primary-blue;
+					margin: 0 0 16px;
+				}
+			}
+
+			.phone p {
+				line-height: 18px;
+
+				&.general-enquiries {
+					margin: 0 0 8px;
+				}
+			}
+
+			.social-nav {
+				margin: 24px 0 0;
+
+				.social-menu {
+					margin: 0;
+
+					li {
+						padding: 0 10px;
+
+						&:first-child {
+							padding-left: 0;
+						}
+
+						&:last-child {
+							padding-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		display: none;
+	}
 }

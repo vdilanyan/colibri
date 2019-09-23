@@ -71,29 +71,39 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.colibri-button {
+.colibri-button,
+.frm_button_submit {
   display: inline-block;
   padding: 14px 32px;
   border-radius: 4px;
   font-family: "Gilroy-ExtraBold", sans-serif;
   font-size: 20px;
   letter-spacing: 0.04em;
+  border: none;
   transition: 0.5s;
 }
-.colibri-button.button-primary {
+.colibri-button.button-primary,
+.frm_button_submit.button-primary,
+.colibri-button[type=submit],
+.frm_button_submit[type=submit] {
   color: #00237E;
   background: #A9DDFF;
 }
-.colibri-button.button-primary:hover {
+.colibri-button.button-primary:hover,
+.frm_button_submit.button-primary:hover,
+.colibri-button[type=submit]:hover,
+.frm_button_submit[type=submit]:hover {
   color: #00237E;
   box-shadow: 0px 0px 20px #A9DDFF;
 }
-.colibri-button.button-secondary {
+.colibri-button.button-secondary,
+.frm_button_submit.button-secondary {
   color: #211B56;
   background: #fff;
   box-shadow: 0px 10px 20px rgba(224, 224, 224, 0.35);
 }
-.colibri-button.button-secondary:hover {
+.colibri-button.button-secondary:hover,
+.frm_button_submit.button-secondary:hover {
   color: #211B56;
   box-shadow: 0px 0px 20px #A9DDFF;
 }
@@ -1223,6 +1233,103 @@ body.home .products .products-container .product-item span {
 .page-template-why-ecopods .footer-image {
   height: 400px;
 }
-.contact-page {
-  margin-top: 80px;
+.page-template-contacts .contact-page {
+  margin: 80px 0 70px;
+}
+.page-template-contacts .contact-page .flex-container {
+  justify-content: space-between;
+}
+.page-template-contacts .contact-page .flex-container .contacts {
+  flex: 1;
+  margin-right: 30px;
+}
+.page-template-contacts .contact-page .flex-container .contacts #contacts-map {
+  width: 100%;
+  height: 375px;
+}
+.page-template-contacts .contact-page .flex-container .contacts #contacts-map img {
+  max-width: inherit !important;
+}
+.page-template-contacts .contact-page .flex-container .contact-form-cnt {
+  flex: 1;
+  margin-left: 30px;
+  width: 570px;
+}
+.page-template-contacts .contact-page .flex-container .contact-form {
+  padding: 32px 86px 54px;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(141, 141, 141, 0.35);
+}
+.page-template-contacts .contact-page .flex-container .contact-form .form-field {
+  position: relative;
+}
+.page-template-contacts .contact-page .flex-container .contact-form .form-field .frm_error {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 5px);
+}
+.page-template-contacts .contact-page .flex-container .contact-form .frm_error_style {
+  margin-bottom: 32px;
+}
+.page-template-contacts .contact-page .flex-container .contact-form .frm_submit {
+  text-align: center;
+}
+.page-template-contacts .contact-page .flex-container .contact-form .form-title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 30px;
+  line-height: 38px;
+  color: #3A3A3A;
+  margin: 0 0 46px;
+}
+.page-template-contacts .contact-page .contact-info {
+  display: flex;
+  padding-top: 36px;
+  justify-content: flex-end;
+}
+.page-template-contacts .contact-page .contact-info .address {
+  max-width: 220px;
+}
+.page-template-contacts .contact-page .contact-info h3 {
+  margin: 0 0 24px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #211B56;
+  letter-spacing: 0.08em;
+}
+.page-template-contacts .contact-page .contact-info h3.address-title {
+  margin: 0 0 8px;
+}
+.page-template-contacts .contact-page .contact-info p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #4f4f4f;
+  margin: 0;
+}
+.page-template-contacts .contact-page .contact-info p.company-name {
+  color: #211B56;
+  margin: 0 0 16px;
+}
+.page-template-contacts .contact-page .contact-info .phone p {
+  line-height: 18px;
+}
+.page-template-contacts .contact-page .contact-info .phone p.general-enquiries {
+  margin: 0 0 8px;
+}
+.page-template-contacts .contact-page .contact-info .social-nav {
+  margin: 24px 0 0;
+}
+.page-template-contacts .contact-page .contact-info .social-nav .social-menu {
+  margin: 0;
+}
+.page-template-contacts .contact-page .contact-info .social-nav .social-menu li {
+  padding: 0 10px;
+}
+.page-template-contacts .contact-page .contact-info .social-nav .social-menu li:first-child {
+  padding-left: 0;
+}
+.page-template-contacts .contact-page .contact-info .social-nav .social-menu li:last-child {
+  padding-right: 0;
+}
+.page-template-contacts footer {
+  display: none;
 }

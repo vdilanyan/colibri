@@ -39,3 +39,9 @@ function add_to_context($context) {
 	return $context;
 }
 add_filter("timber/context", "add_to_context");
+
+function acf_google_map_api_init($api) {
+	acf_update_setting("google_api_key", "AIzaSyBK3O9lbhFfnYlpKptVZNjOghEGTzzEQyg");
+}
+
+add_filter("acf/init", "acf_google_map_api_init");
