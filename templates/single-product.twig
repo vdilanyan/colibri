@@ -135,6 +135,7 @@
 				{% for product in single_product.other_products %}
 					<a href="{{ product.link }}" title="{{ product.title }}" class="product-list-item text-center">
 						<img src="{{ product.get_field('products_page_image') }}" alt="{{ product.title }}">
+						<img src="{{ product.get_field('products_page_image_hover') }}" class="hover-state" alt="{{ product.title }}">
 						<span>{{ product.title }}</span>
 					</a>
 				{% endfor %}
