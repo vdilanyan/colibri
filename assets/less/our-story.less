@@ -1,0 +1,188 @@
+.page-template-our-story {
+	.our-story-page-content {
+		margin: 80px 0 0;
+
+		.page-title {
+			text-align: left;
+			margin: 0 0 50px;
+			line-height: 80px;
+		}
+
+		.content-grid {
+			display: grid;
+			grid-column-gap: 15px;
+			grid-template-areas: "first-paragraph fp-large-image"
+													 "fp-small-image fp-large-image"
+													 "second-paragraph second-paragraph"
+													 "spf-small-image sp-large-image"
+													 "sps-small-image sp-large-image"
+													 "third-paragraph third-paragraph";
+
+			
+			.paragraph {
+				line-height: 40px;
+				letter-spacing: 0.04em;
+				color: @primary-blue;
+				margin: 0;
+			}
+
+			figcaption {
+				margin-top: 26px;
+				font-size: 14px;
+				line-height: 24px;
+				letter-spacing: 0.04em;
+				color: @mid-grey;
+			}
+
+			.first-paragraph {
+				grid-area: first-paragraph;
+				margin-bottom: 35px;
+			}
+
+			.fp-small-image {
+				grid-area: fp-small-image;
+			}
+
+			.fp-large-image {
+				grid-area: fp-large-image;
+			}
+
+			.second-paragraph {
+				grid-area: second-paragraph;
+				margin: 26px 0 35px;
+			}
+
+			.spf-small-image {
+				grid-area: spf-small-image;
+				margin: 0 0 32px;
+			}
+
+			.sps-small-image {
+				grid-area: sps-small-image;
+			}
+
+			.sp-large-image {
+				grid-area: sp-large-image;
+			}
+
+			.third-paragraph {
+				grid-area: third-paragraph;
+				margin-top: 50px;
+			}
+		}
+
+		figure {
+			display: table;
+		}
+		
+		figure img { 
+			display: block;
+		}
+		
+		figcaption {
+			display: table-caption;
+			caption-side: bottom;
+		}
+	}
+
+	.our-team {
+		margin: 120px 0;
+
+		.page-title {
+			margin: 0 0 46px;
+		}
+
+		.ceo-content {
+			flex-wrap: nowrap;
+			margin-bottom: 120px;
+		}
+
+		.ceo-image {
+			align-self: flex-start;
+			display: block;
+			width: 427px;
+			margin-right: 62px; 
+		}
+
+		.ceo-bio {
+			> p {
+				line-height: 40px;
+				color: @primary-blue;
+				letter-spacing: 0.04em;
+				margin: 105px 0 150px;
+			}
+
+			.signature {
+				> img {
+					width: 180px;
+				}
+
+				.ceo-name {
+					margin-right: 150px;
+					color: @primary-blue;
+					letter-spacing: 0.08em;
+
+					p {
+						margin: 0;
+					}
+
+					.name {
+						font-size: 36px;
+						line-height: 40px;
+						margin: 0 0 12px;
+					}
+
+					.position {
+						font-size: 24px;
+					}
+				}
+			}
+		}
+
+		.team-members {
+			width: 830px;
+			margin: 0 auto;
+
+			.member {
+				display: flex;
+				margin: 0 0 64px;
+
+				&:last-child {
+					margin: 0;
+				}
+
+				.photo-cnt {
+					display: flex;
+					flex-basis: 300px;
+					justify-content: center;
+					margin-right: 46px;
+
+					img {
+						margin: 0 auto;
+					}
+				}
+
+				.member-info {
+					flex: 1;
+					color: @primary-blue;
+					
+					.name {
+						font-size: 24px;
+						line-height: 40px;
+						letter-spacing: 0.08em;
+					}
+
+					.position {
+						margin-bottom: 28px;
+					}
+
+					.bio {
+						line-height: 40px;
+						letter-spacing: 0.04em;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -29,13 +29,16 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: "Gilroy-Light", sans-serif;
+  font-family: 'Gilroy-Light', sans-serif;
   font-size: 18px;
   line-height: 1.2;
   position: relative;
 }
 .font-extra-bold {
-  font-family: "Gilroy-ExtraBold", sans-serif;
+  font-family: 'Gilroy-ExtraBold', sans-serif;
+}
+.font-playfair {
+  font-family: 'Playfair Display', serif;
 }
 .flex-container {
   display: flex;
@@ -76,7 +79,7 @@ body {
   display: inline-block;
   padding: 14px 32px;
   border-radius: 4px;
-  font-family: "Gilroy-ExtraBold", sans-serif;
+  font-family: 'Gilroy-ExtraBold', sans-serif;
   font-size: 20px;
   letter-spacing: 0.04em;
   border: none;
@@ -119,7 +122,7 @@ body {
 .section-title-small {
   color: #211B56;
   font-size: 36px;
-  font-family: "Gilroy-ExtraBold", sans-serif;
+  font-family: 'Gilroy-ExtraBold', sans-serif;
   text-align: center;
   line-height: 46px;
   letter-spacing: 0.04em;
@@ -450,7 +453,7 @@ body.home .steps .steps-content-cnt .steps-list p {
 }
 body.home .steps .steps-content-cnt .steps-list p span {
   color: #00237E;
-  font-family: "Gilroy-ExtraBold", sans-serif;
+  font-family: 'Gilroy-ExtraBold', sans-serif;
 }
 body.home .product-information {
   margin-top: 120px;
@@ -512,7 +515,7 @@ body.home .our-customers .our-customers-carousel .testimonial i {
 body.home .our-customers .our-customers-carousel .testimonial .testimonial-text {
   font-size: 20px;
   color: #211B56;
-  font-family: "Gilroy-ExtraBold", sans-serif;
+  font-family: 'Gilroy-ExtraBold', sans-serif;
   margin: 0 0 12px;
 }
 body.home .our-customers .our-customers-carousel .testimonial .customer-name {
@@ -794,7 +797,7 @@ body.home .products .products-container .product-item span {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.04em;
-  font-family: "Gilroy-ExtraBold", sans-serif;
+  font-family: 'Gilroy-ExtraBold', sans-serif;
 }
 #faq-accordion .accordion-element .accordion-heading a::after {
   content: url('assets/img/chevron-down.png');
@@ -1033,7 +1036,7 @@ body.home .products .products-container .product-item span {
   margin: 0 auto;
 }
 .page-template-how-it-works .top-content .page-description span {
-  font-family: "Gilroy-ExtraBold", sans-serif;
+  font-family: 'Gilroy-ExtraBold', sans-serif;
 }
 .page-template-how-it-works .how-its-made {
   margin-top: 80px;
@@ -1071,7 +1074,7 @@ body.home .products .products-container .product-item span {
   color: #211B56;
 }
 .page-template-how-it-works .how-its-made .how-its-made-content .how-its-made-list li p span {
-  font-family: "Gilroy-ExtraBold", sans-serif;
+  font-family: 'Gilroy-ExtraBold', sans-serif;
 }
 .page-template-how-it-works .how-it-works {
   margin-top: 80px;
@@ -1298,7 +1301,7 @@ body.home .products .products-container .product-item span {
   text-align: center;
 }
 .page-template-contacts .contact-page .flex-container .contact-form .form-title {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   line-height: 38px;
   color: #3A3A3A;
@@ -1377,7 +1380,7 @@ body.home .products .products-container .product-item span {
   margin: 0;
 }
 .page-template-why-colibri .page-top-content .page-content h3 {
-  font-family: "Gilroy-ExtraBold", sans-serif;
+  font-family: 'Gilroy-ExtraBold', sans-serif;
   margin: 0 0 10px;
 }
 .page-template-why-colibri .page-top-content .page-content-photo {
@@ -1451,4 +1454,146 @@ body.home .products .products-container .product-item span {
   line-height: 32px;
   letter-spacing: 0.04em;
   color: #211B56;
+}
+.page-template-our-story .our-story-page-content {
+  margin: 80px 0 0;
+}
+.page-template-our-story .our-story-page-content .page-title {
+  text-align: left;
+  margin: 0 0 50px;
+  line-height: 80px;
+}
+.page-template-our-story .our-story-page-content .content-grid {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-template-areas: "first-paragraph fp-large-image" "fp-small-image fp-large-image" "second-paragraph second-paragraph" "spf-small-image sp-large-image" "sps-small-image sp-large-image" "third-paragraph third-paragraph";
+}
+.page-template-our-story .our-story-page-content .content-grid .paragraph {
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  color: #211B56;
+  margin: 0;
+}
+.page-template-our-story .our-story-page-content .content-grid figcaption {
+  margin-top: 26px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #979797;
+}
+.page-template-our-story .our-story-page-content .content-grid .first-paragraph {
+  grid-area: first-paragraph;
+  margin-bottom: 35px;
+}
+.page-template-our-story .our-story-page-content .content-grid .fp-small-image {
+  grid-area: fp-small-image;
+}
+.page-template-our-story .our-story-page-content .content-grid .fp-large-image {
+  grid-area: fp-large-image;
+}
+.page-template-our-story .our-story-page-content .content-grid .second-paragraph {
+  grid-area: second-paragraph;
+  margin: 26px 0 35px;
+}
+.page-template-our-story .our-story-page-content .content-grid .spf-small-image {
+  grid-area: spf-small-image;
+  margin: 0 0 32px;
+}
+.page-template-our-story .our-story-page-content .content-grid .sps-small-image {
+  grid-area: sps-small-image;
+}
+.page-template-our-story .our-story-page-content .content-grid .sp-large-image {
+  grid-area: sp-large-image;
+}
+.page-template-our-story .our-story-page-content .content-grid .third-paragraph {
+  grid-area: third-paragraph;
+  margin-top: 50px;
+}
+.page-template-our-story .our-story-page-content figure {
+  display: table;
+}
+.page-template-our-story .our-story-page-content figure img {
+  display: block;
+}
+.page-template-our-story .our-story-page-content figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+.page-template-our-story .our-team {
+  margin: 120px 0;
+}
+.page-template-our-story .our-team .page-title {
+  margin: 0 0 46px;
+}
+.page-template-our-story .our-team .ceo-content {
+  flex-wrap: nowrap;
+  margin-bottom: 120px;
+}
+.page-template-our-story .our-team .ceo-image {
+  align-self: flex-start;
+  display: block;
+  width: 427px;
+  margin-right: 62px;
+}
+.page-template-our-story .our-team .ceo-bio > p {
+  line-height: 40px;
+  color: #211B56;
+  letter-spacing: 0.04em;
+  margin: 105px 0 150px;
+}
+.page-template-our-story .our-team .ceo-bio .signature > img {
+  width: 180px;
+}
+.page-template-our-story .our-team .ceo-bio .signature .ceo-name {
+  margin-right: 150px;
+  color: #211B56;
+  letter-spacing: 0.08em;
+}
+.page-template-our-story .our-team .ceo-bio .signature .ceo-name p {
+  margin: 0;
+}
+.page-template-our-story .our-team .ceo-bio .signature .ceo-name .name {
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0 0 12px;
+}
+.page-template-our-story .our-team .ceo-bio .signature .ceo-name .position {
+  font-size: 24px;
+}
+.page-template-our-story .our-team .team-members {
+  width: 830px;
+  margin: 0 auto;
+}
+.page-template-our-story .our-team .team-members .member {
+  display: flex;
+  margin: 0 0 64px;
+}
+.page-template-our-story .our-team .team-members .member:last-child {
+  margin: 0;
+}
+.page-template-our-story .our-team .team-members .member .photo-cnt {
+  display: flex;
+  flex-basis: 300px;
+  justify-content: center;
+  margin-right: 46px;
+}
+.page-template-our-story .our-team .team-members .member .photo-cnt img {
+  margin: 0 auto;
+}
+.page-template-our-story .our-team .team-members .member .member-info {
+  flex: 1;
+  color: #211B56;
+}
+.page-template-our-story .our-team .team-members .member .member-info .name {
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.08em;
+}
+.page-template-our-story .our-team .team-members .member .member-info .position {
+  margin-bottom: 28px;
+}
+.page-template-our-story .our-team .team-members .member .member-info .bio {
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  margin: 0;
 }

@@ -2,4 +2,80 @@
 
 {% block content %}
 
+<div class="container">
+	<section class="our-story-page-content">
+		<p class="page-title font-extra-bold">{{ our_story.page_title }}</p>
+		<div class="content-grid">
+			<p class="first-paragraph paragraph">
+				{{ our_story.first_paragraph }}
+			</p>
+
+			<div class="fp-small-image">
+				{% include "templates/partial/figure.twig" with {image_object: our_story.first_paragraph_small_image} %}
+			</div>
+
+			<div class="fp-large-image">
+				{% include "templates/partial/figure.twig" with {image_object: our_story.first_paragraph_large_image} %}
+			</div>
+
+			<p class="second-paragraph paragraph">
+				{{ our_story.second_paragraph }}
+			</p>
+
+			<div class="spf-small-image">
+				{% include "templates/partial/figure.twig" with {image_object: our_story.second_paragraph_first_small_image} %}
+			</div>
+
+			<div class="sps-small-image">
+				{% include "templates/partial/figure.twig" with {image_object: our_story.second_paragraph_second_small_image} %}
+			</div>
+
+			<div class="sp-large-image">
+				{% include "templates/partial/figure.twig" with {image_object: our_story.second_paragraph_large_image} %}
+			</div>
+
+			<p class="third-paragraph paragraph">
+				{{ our_story.third_paragraph }}
+			</p>
+		</div>
+	</section>
+
+	<section class="our-team">
+		<p class="page-title font-extra-bold">
+			{{ our_story.section_title }}
+		</p>
+		<div class="flex-container ceo-content">
+			<img src="{{ our_story.ceo_image }}" alt="{{ our_story.ceo_name }}" class="ceo-image">
+			<div class="ceo-bio">
+				<p>{{ our_story.ceo_bio }}</p>
+				<div class="flex-container signature">
+					<div class="ceo-name font-playfair">
+						<p class="name">
+							{{ our_story.ceo_name }}
+						</p>
+						<p class="position">
+							{{ our_story.ceo_position }}
+						</p>
+					</div>
+					<img src="{{ our_story.ceo_signature }}">
+				</div>
+			</div>
+		</div>
+		<div class="team-members">
+			{% for member in our_story.team_members %}
+				<div class="member">
+					<div class="photo-cnt">
+						<img src="{{ member.photo }}" alt="{{ member.name }}" class="photo">
+					</div>
+					<div class="member-info">
+						<p class="name font-extra-bold">{{ member.name }}</p>
+						<p class="position">{{ member.position }}</p>
+						<p class="bio font-extra-bold">{{ member.bio }}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+</div>
+
 {% endblock %}
