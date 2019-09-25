@@ -1403,11 +1403,18 @@ body.home .products .products-container .product-item span {
 .page-template-why-colibri .tale .tale-items.do-nothing .tale-item:last-child img {
   width: 178px;
 }
+.page-template-why-colibri .tale .tale-items.do-something .tale-item:nth-child(2) img {
+  width: 478px;
+}
+.page-template-why-colibri .tale .tale-items.do-something .tale-item:not(:last-child) p {
+  margin: 0;
+}
 .page-template-why-colibri .tale .tale-items .tale-item {
   margin: 0 0 40px;
 }
 .page-template-why-colibri .tale .tale-items .tale-item p {
   color: #211B56;
+  margin: 0 0 21px;
 }
 .page-template-why-colibri .tale .tale-items .tale-item img {
   display: block;

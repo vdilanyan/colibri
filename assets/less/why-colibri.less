@@ -1,0 +1,131 @@
+.page-template-why-colibri {
+	.page-top-content {
+		margin-top: 80px;
+
+		.page-title {
+			margin: 0 0 24px;
+			text-align: left;
+		}
+
+		.flex-container {
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.page-content {
+			flex-basis: 55%;
+			line-height: 40px;
+			letter-spacing: 0.04em;
+			color: @primary-blue;
+
+			p {
+				margin: 0;
+			}
+
+			h3 {
+				font-family: @font-family-extra-bold;
+				margin: 0 0 10px;
+			}
+		}
+
+		.page-content-photo {
+			flex-basis: 40%;
+			text-align: right;
+
+			img {
+				max-width: 400px;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.tale {
+		margin-top: 120px;
+
+		.page-title {
+			line-height: 80px;
+			margin: 0 0 64px;
+		}
+
+		.flex-container {
+			justify-content: center;
+		}
+
+		.verticlal-line {
+			width: 1px;
+			background-color: @lighter-grey;
+			margin: 0 48px;
+		}
+
+		.tale-items {
+			&.do-nothing {
+				.tale-item:last-child img {
+					width: 178px;
+				}
+			}
+
+			&.do-something {
+				.tale-item {
+					&:nth-child(2) img {
+						width: 478px;
+					}
+
+					&:not(:last-child) {
+						p {
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			.tale-item {
+				margin: 0 0 40px;
+
+				p {
+					color: @primary-blue;
+					margin: 0 0 21px;
+				}
+
+				img {
+					display: block;
+					width: 332px;
+					margin: 0 auto
+				}
+			}
+		}
+	}
+
+	.small-title {
+		font-size: 48px;
+		line-height: 55px;
+		letter-spacing: 0.04em;
+		color: @primary-blue;
+		margin: 0 0 46px;
+	}
+
+	.idea {
+		margin-top: 120px;
+
+		.small-title {
+			line-height: 60px;
+			margin: 0 0 80px;
+		}
+
+		img {
+			display: block;
+			margin: 0 auto;
+			max-width: 410px;
+		}
+	}
+
+	.page-footer {
+		margin: 120px 0;
+
+		.page-footer-description {
+			margin: 0;
+			line-height: 32px;
+			letter-spacing: 0.04em;
+			color: @primary-blue;
+		}
+	}
+}
