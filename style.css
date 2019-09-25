@@ -1114,6 +1114,9 @@ body.home .products .products-container .product-item span {
   width: 225px;
   margin: 0 100px;
 }
+.page-template-how-it-works .before-now .flex-container .section-column:last-child img {
+  width: 97px;
+}
 .page-template-how-it-works .before-now .flex-container .section-column p {
   font-size: 18px;
   margin: 0 0 46px;
