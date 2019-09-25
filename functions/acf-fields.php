@@ -17,3 +17,4 @@ require_once('fields/theme-settings-fields.php');
 require_once('fields/how-it-works.php');
 require_once('fields/why-ecopods.php');
 require_once('fields/contact-page-fields.php');
+require_once('fields/why-colibri.php');

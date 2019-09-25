@@ -145,6 +145,9 @@ header .header-nav-bar {
   justify-content: space-between;
   align-items: center;
 }
+header .header-nav-bar #logo {
+  width: 70px;
+}
 header .header-nav-bar .nav-main {
   padding: 0;
   margin: 0;
@@ -1349,4 +1352,93 @@ body.home .products .products-container .product-item span {
 }
 .page-template-contacts footer {
   display: none;
+}
+.page-template-why-colibri .page-top-content {
+  margin-top: 80px;
+}
+.page-template-why-colibri .page-top-content .page-title {
+  margin: 0 0 24px;
+  text-align: left;
+}
+.page-template-why-colibri .page-top-content .flex-container {
+  justify-content: space-between;
+  align-items: center;
+}
+.page-template-why-colibri .page-top-content .page-content {
+  flex-basis: 55%;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  color: #211B56;
+}
+.page-template-why-colibri .page-top-content .page-content p {
+  margin: 0;
+}
+.page-template-why-colibri .page-top-content .page-content h3 {
+  font-family: "Gilroy-ExtraBold", sans-serif;
+  margin: 0 0 10px;
+}
+.page-template-why-colibri .page-top-content .page-content-photo {
+  flex-basis: 40%;
+  text-align: right;
+}
+.page-template-why-colibri .page-top-content .page-content-photo img {
+  max-width: 400px;
+  border-radius: 50%;
+}
+.page-template-why-colibri .tale {
+  margin-top: 120px;
+}
+.page-template-why-colibri .tale .page-title {
+  line-height: 80px;
+  margin: 0 0 64px;
+}
+.page-template-why-colibri .tale .flex-container {
+  justify-content: center;
+}
+.page-template-why-colibri .tale .verticlal-line {
+  width: 1px;
+  background-color: #c4c4c4;
+  margin: 0 48px;
+}
+.page-template-why-colibri .tale .tale-items.do-nothing .tale-item:last-child img {
+  width: 178px;
+}
+.page-template-why-colibri .tale .tale-items .tale-item {
+  margin: 0 0 40px;
+}
+.page-template-why-colibri .tale .tale-items .tale-item p {
+  color: #211B56;
+}
+.page-template-why-colibri .tale .tale-items .tale-item img {
+  display: block;
+  width: 332px;
+  margin: 0 auto;
+}
+.page-template-why-colibri .small-title {
+  font-size: 48px;
+  line-height: 55px;
+  letter-spacing: 0.04em;
+  color: #211B56;
+  margin: 0 0 46px;
+}
+.page-template-why-colibri .idea {
+  margin-top: 120px;
+}
+.page-template-why-colibri .idea .small-title {
+  line-height: 60px;
+  margin: 0 0 80px;
+}
+.page-template-why-colibri .idea img {
+  display: block;
+  margin: 0 auto;
+  max-width: 410px;
+}
+.page-template-why-colibri .page-footer {
+  margin: 120px 0;
+}
+.page-template-why-colibri .page-footer .page-footer-description {
+  margin: 0;
+  line-height: 32px;
+  letter-spacing: 0.04em;
+  color: #211B56;
 }

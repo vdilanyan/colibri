@@ -3,7 +3,11 @@
 		<div class="flex-container header-nav-bar">
 			<div itemscope itemtype="http://schema.org/Organization" id="logo">
 				<a itemprop="url" href="{{ site.url }}">
-					<img itemprop="logo" src="{{ theme.path }}/assets/img/logo.png">
+					<img itemprop="logo"
+						src="{{ theme.path }}/assets/img/logo.png"
+						srcset="{{ theme.path }}/assets/img/logo.png 1x,
+										{{ theme.path }}/assets/img/logo-retina.png 2x"
+					>
 				</a>
 			</div>
 			<nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="header-main-menu">
