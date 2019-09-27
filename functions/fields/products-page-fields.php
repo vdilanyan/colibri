@@ -1,9 +1,12 @@
 <?php
 use StoutLogic\AcfBuilder\FieldsBuilder;
+require_once('partials/faq-fields.php');
 
 $products_page_options = new FieldsBuilder('products_page_options', [
 	'position' => 'acf_after_title',
 ]);
+
+$faq_fields = new FAQ_Fields();
 
 $products_page_options
 	->addTab('product_information', [
@@ -40,20 +43,7 @@ $products_page_options
 		'placement' => 'left',
 		'label' => 'FAQs',
 	])
-	->addText('faqs_title', [
-		'label' => 'Title',
-	])
-
-	->addRepeater('faqs', [
-		'button_label' => 'Add FAQs',
-	])
-		->addPostObject('faq', [
-			'post_type' => [
-				0 => 'faq',
-			]
-		])
-		->setRequired()
-	->endRepeater()
+	->addFields($faq_fields->get_fields())
 
 	->addTab('surfaces', [
 		'placement' => 'left',

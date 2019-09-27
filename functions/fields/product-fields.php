@@ -1,5 +1,6 @@
 <?php
 use StoutLogic\AcfBuilder\FieldsBuilder;
+require_once('partials/faq-fields.php');
 
 $product_fields = new FieldsBuilder('product_additional_options', [
 	'position' => 'side',
@@ -34,6 +35,8 @@ add_action('acf/init', function() use ($product_fields) {
 $product_options = new FieldsBuilder('product_options', [
 	'position' => 'acf_after_title',
 ]);
+
+$faq_fields = new FAQ_Fields();
 
 $product_options
 	->addTab('product_features', [
@@ -94,20 +97,7 @@ $product_options
 		'placement' => 'left',
 		'label' => 'FAQs',
 	])
-	->addText('faqs_title', [
-		'label' => 'Title',
-	])
-
-	->addRepeater('faqs', [
-		'button_label' => 'Add FAQs',
-	])
-		->addPostObject('faq', [
-			'post_type' => [
-				0 => 'faq',
-			]
-		])
-		->setRequired()
-	->endRepeater()
+	->addFields($faq_fields->get_fields())
 
 	->addTab('full_width_image', [
 		'placement' => 'left',

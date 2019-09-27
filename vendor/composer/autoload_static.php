@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit4406638d5e01b9cda491c1c064a1378e
 {
     public static $prefixLengthsPsr4 = array (
+        'c' => 
+        array (
+            'colibri_functions\\fields\\partials\\' => 34,
+        ),
         'S' => 
         array (
             'StoutLogic\\AcfBuilder\\' => 22,
@@ -19,6 +23,10 @@ class ComposerStaticInit4406638d5e01b9cda491c1c064a1378e
     );
 
     public static $prefixDirsPsr4 = array (
+        'colibri_functions\\fields\\partials\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/colibri-functions/fields/partials',
+        ),
         'StoutLogic\\AcfBuilder\\' => 
         array (
             0 => __DIR__ . '/..' . '/stoutlogic/acf-builder/src',

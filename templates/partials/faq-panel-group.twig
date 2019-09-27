@@ -1,0 +1,19 @@
+<div class="panel-group" id="faq-accordion">
+	{% for faqs in page_faqs %}
+		<div class="accordion-element panel panel-default">
+			<img src="{{ theme.path }}/assets/img/frame.png" alt="faq-frame" class="faq-frame">
+			{% for faq in faqs %}
+				<div class="accordion-heading">
+					<a data-toggle="collapse" data-parent="#faq-accordion" href="#collapse-{{ faq.ID }}">
+						{{ faq.post_title }}
+					</a>
+				</div>
+				<div id="collapse-{{ faq.ID }}" class="panel-collapse collapse">
+					<div class="accordion-body">
+						{{ faq.post_content }}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% endfor %}
+</div>

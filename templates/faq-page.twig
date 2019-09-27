@@ -1,0 +1,27 @@
+{% extends "templates/base.twig" %}
+
+{% block content %}
+
+<div class="faq-page">
+	{% if faq_page.faqs %}
+		<section class="faqs">
+			<div class="container">
+				{{ faq_page.faqs_title ?
+					'<p class="section-title-small">' ~ faq_page.faqs_title ~ '</p>'
+				}}
+				
+				{% include "templates/partials/faq-panel-group.twig" with { 'page_faqs': faq_page.faqs } %}
+			</div>
+		</section>
+	{% endif %}
+
+	<section class="contact-form-cnt">
+		<p class="h3 text-center font-extra-bold">{{ __("Don’t see what you need?", "colibri") }}</p>
+		<div class="contact-form">
+			<p class="form-title text-center">{{ __("Send us a message!", "colibri") }}</p>
+			{{ function('do_shortcode', '[formidable id=' ~ faq_page.form_id ~ ']') }}
+		</div>
+	</section>
+</div>
+
+{% endblock %}
