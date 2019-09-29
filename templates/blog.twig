@@ -2,4 +2,41 @@
 
 {% block content %}
 
+<section class="page-blog">
+	<div class="container">
+		<div class="page-intro">
+			<h1 class="page-title font-extra-bold">{{ blog.page_title }}</h1>
+			<p class="page-content font-source-sans text-center">{{ blog.page_content }}</p>
+		</div>
+		{% if blog.terms %}
+			<div class="blog-terms">
+				<ul>
+					<li class="active">
+						<a href="#" data-term-slug="all" data-nonce="{{ function('wp_create_nonce', 'load_category') }}" data-per-page="{{ blog.posts_per_page }}">
+							{{ __("All", "colibri") }}
+						</a>
+					</li>
+					{% for term in blog.terms %}
+						<li>
+							<a href="#" data-term-slug="{{ term.slug }}" data-nonce="{{ function('wp_create_nonce', 'load_category') }}" data-per-page="{{ blog.posts_per_page }}">
+								{{ term.name }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+		<div class="blog-posts">
+			{% include "templates/partials/blog-posts.twig" with { "posts": blog.posts, "triangle_right": theme.path ~ "/assets/img/read-more.png" } %}
+		</div>
+		{% if blog.posts_per_page < blog.found_posts %}
+			<div class="load-more text-center">
+				<a href="#" class="colibri-button button-primary" data-per-page="{{ blog.posts_per_page }}" data-term-slug="all" data-nonce="{{ function("wp_create_nonce", "load_more") }}">
+					{{ __("Load More", "colibri") }}
+				</a>
+			</div>
+		{% endif %}
+	</div>
+</section>
+
 {% endblock %}
