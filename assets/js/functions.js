@@ -65,10 +65,11 @@ $(window).load(function() {
 $(window).scroll(function() {
 	if (whyEcopodsBtn.length) {
 		var btn = whyEcopodsBtn.find('a');
-		var btnHeight = btn.outerHeight();
-		var btnOffsetBottom = btn.offset().top + btnHeight;
-		var windowScrollTop = $(this).scrollTop() + $(this).outerHeight() - 40;
-
+		var btnHeight = whyEcopodsBtn.outerHeight();
+		var btnOffsetBottom = whyEcopodsBtn.offset().top + btnHeight;
+		var windowScrollTop = $(this).scrollTop() + $(this).height() - 40;
+		console.log('windowScrollTop: ' + windowScrollTop);
+		console.log('btnOffsetBottom: ' + btnOffsetBottom);
 		if (windowScrollTop >= btnOffsetBottom) {
 			whyEcopodsBtn.height(btnHeight);
 			btn.addClass('fixed');
