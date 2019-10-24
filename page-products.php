@@ -6,6 +6,7 @@ $context = Timber::get_context();
 $product_args = [
 	'post_type' => 'product',
 	'posts_per_page' => 5,
+	'post_status' => 'publish',
 	'order' => 'ASC',
 ];
 

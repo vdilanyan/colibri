@@ -977,6 +977,95 @@ body.home .products .products-container .product-item span {
   margin: 74px 0 0;
   height: 530px;
 }
+.single-product .product-reviews {
+  padding: 36px 0 32px;
+  background: #E6F4FB;
+}
+.single-product .product-reviews .title-cnt {
+  width: 652px;
+  margin: 0 auto 80px;
+}
+.single-product .product-reviews .title-cnt .reviews-title {
+  text-align: left;
+  margin: 0 0 24px;
+  color: #211B56;
+  letter-spacing: 0.04em;
+}
+.single-product .product-reviews .total-reviews {
+  align-items: center;
+}
+.single-product .product-reviews .total-reviews .reviews-count {
+  font-size: 16px;
+  line-height: 24px;
+  color: #000;
+  position: relative;
+}
+.single-product .product-reviews .total-reviews .reviews-count::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  height: 1px;
+}
+.single-product .product-reviews .total-reviews .total-stars {
+  display: block;
+  height: 24px;
+  margin-right: 20px;
+}
+.single-product .product-reviews .reviews-cnt .single-review-cnt {
+  padding-bottom: 36px;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 46px;
+}
+.single-product .product-reviews .reviews-cnt .single-review-cnt:last-child {
+  border: none;
+  margin: 0;
+}
+.single-product .product-reviews .single-review {
+  width: 652px;
+  margin: 0 auto;
+}
+.single-product .product-reviews .single-review .review-header {
+  align-items: center;
+  margin-bottom: 36px;
+}
+.single-product .product-reviews .single-review .review-header .reviewer-name {
+  color: #000;
+  letter-spacing: 0.04em;
+  margin: 0 26px 0 0;
+}
+.single-product .product-reviews .single-review .review-header img {
+  height: 15px;
+}
+.single-product .product-reviews .single-review .review-footer {
+  justify-content: space-between;
+  color: #211B56;
+}
+.single-product .product-reviews .single-review .review-footer .review-content {
+  letter-spacing: 0.04em;
+  max-width: 445px;
+  margin: 0;
+}
+.single-product .product-reviews .single-review .review-footer .review-date {
+  letter-spacing: 0.04em;
+}
+.single-product .product-reviews .view-more-btn {
+  margin-top: 32px;
+  display: inline-block;
+  color: #211B56;
+  position: relative;
+}
+.single-product .product-reviews .view-more-btn::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #211B56;
+}
 .single-product .other-products {
   margin: 75px 0 120px;
 }
