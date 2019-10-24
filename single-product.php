@@ -38,13 +38,17 @@ $reviews_args = [
 
 $reviews = get_posts($reviews_args);
 
-$total_review_stars = 0;
+if (count($reviews)) {
+	$total_review_stars = 0;
 
-foreach ($reviews as $review) {
-	$total_review_stars += (int)get_field('star_rating', $review->ID);
+	foreach ($reviews as $review) {
+		$total_review_stars += (int)get_field('star_rating', $review->ID);
+	}
+
+	$total_review_stars = round($total_review_stars / count($reviews));
+
+	$context['single_product']['total_product_rating'] = $total_review_stars;
 }
-
-$total_review_stars = round($total_review_stars / count($reviews));
 
 $context['single_product'] = [
 	'post' => $product,
@@ -59,7 +63,6 @@ $context['single_product'] = [
 	'full_width_image' => get_field('full_width_image'),
 	'attached_reviews' => $attached_reviews,
 	'reviews' => $reviews,
-	'total_product_rating' => $total_review_stars,
 	'other_products' => Timber::get_posts($product_args),
 ];
 

@@ -131,6 +131,9 @@ body {
   letter-spacing: 0.04em;
   margin: 0 0 64px;
 }
+.faqs .more-faqs {
+  margin: 32px 0 0;
+}
 @media (min-width: 1230px) {
   .container {
     width: 1200px;
@@ -152,7 +155,11 @@ header .header-nav-bar {
   align-items: center;
 }
 header .header-nav-bar #logo {
-  width: 70px;
+  flex: 1;
+}
+header .header-nav-bar #logo a {
+  display: inline-block;
+  color: #211B56;
 }
 header .header-nav-bar .nav-main {
   padding: 0;
@@ -826,9 +833,6 @@ body.home .products .products-container .product-item span {
 }
 .single-product .product-info .product-gallery {
   flex-basis: 55%;
-}
-.single-product .product-info .product-thumb-cnt {
-  height: 683px;
 }
 .single-product .product-info .product-thumb-cnt img {
   display: block;

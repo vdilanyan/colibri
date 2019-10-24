@@ -52,6 +52,11 @@
 			}}
 			
 			{% include "templates/partials/faq-panel-group.twig" with { 'page_faqs': products_page.faqs } %}
+			<div class="text-center">
+				<a href="{{ site.url }}/frequently-asked-questions/" class="colibri-button button-primary more-faqs">
+					{{ __("More FAQs", "colibri") }}
+				</a>
+			</div>
 		</div>
 	</section>
 {% endif %}
