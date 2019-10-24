@@ -33,9 +33,7 @@ $contacts
 		'placement' => 'left',
 	])
 	->addText('general_enquiries')
-	->setRequired()
 	->addText('technical_enquiries')
-	->setRequired()
 
 	->setLocation('page_template', '==', 'contacts.php');
 

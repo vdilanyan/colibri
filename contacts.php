@@ -17,7 +17,7 @@ $context['contacts'] = [
 
 Timber::render('templates/contacts.twig', $context);
 ?>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK3O9lbhFfnYlpKptVZNjOghEGTzzEQyg"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiyKnaTC2TJt_bj6P93vXntyFjar1cFrQ"></script>
 <script type="text/javascript">
 (function($) {
 	function new_map($el) {

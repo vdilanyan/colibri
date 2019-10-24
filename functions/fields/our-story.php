@@ -74,7 +74,6 @@ $our_story
 		'label' => 'CEO Signature',
 		'return_format' => 'url',
 	])
-	->setRequired()
 
 	->addRepeater('team_members', [
 		'min' => 1,
@@ -83,8 +82,6 @@ $our_story
 		->addImage('photo', [
 			'return_format' => 'url',
 		])
-		->setRequired()
-
 		->addText('name')
 		->setRequired()
 

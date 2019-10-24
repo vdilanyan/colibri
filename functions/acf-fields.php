@@ -20,3 +20,5 @@ require_once('fields/contact-page-fields.php');
 require_once('fields/why-colibri.php');
 require_once('fields/our-story.php');
 require_once('fields/faq-page-fields.php');
+require_once('fields/blog-fields.php');
+require_once('fields/blog-single-fields.php');

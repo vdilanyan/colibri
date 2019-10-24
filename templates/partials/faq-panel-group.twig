@@ -1,4 +1,4 @@
-<div class="panel-group" id="faq-accordion">
+<div class="panel-group with_frm_style" id="faq-accordion">
 	{% for faqs in page_faqs %}
 		<div class="accordion-element panel panel-default">
 			<img src="{{ theme.path }}/assets/img/frame.png" alt="faq-frame" class="faq-frame">
@@ -16,4 +16,7 @@
 			{% endfor %}
 		</div>
 	{% endfor %}
+	<div class="frm_submit text-center">
+		<a href="{{ site.url }}/frequently-asked-questions" class="button frm_button_submit">More FAQs</a>
+	</div>
 </div>
