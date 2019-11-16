@@ -11,7 +11,7 @@
 				</div>
 				<div class="contact-info">
 					<div class="address">
-						<h3 class="text-uppercase font-extra-bold address-title">{{ __("address", "colibri") }}</h3>
+						<h3 class="text-uppercase font-extra-bold address-title">{{ __("[:en]address[:fr]adresse", "colibri") }}</h3>
 						<p class="company-name font-extra-bold">
 							{{ contacts.company_name }}
 						</p>
@@ -21,7 +21,7 @@
 						</p>
 						{% if contacts.social_links %}
 							<nav class="social-nav">
-								<h3 class="text-uppercase font-extra-bold">{{ __("follow us", "colibri") }}</h3>
+								<h3 class="text-uppercase font-extra-bold">{{ __("[:en]follow us[:fr]Suivez nous", "colibri") }}</h3>
 								<ul class="list-inline social-menu">
 									{% for item in contacts.social_links %}
 										<li class="social-extra-item">
@@ -35,7 +35,7 @@
 						{% endif %}
 					</div>
 					<div class="phone">
-						<h3 class="text-uppercase font-extra-bold">{{ __("telephone", "colibri") }}</h3>
+						<h3 class="text-uppercase font-extra-bold">{{ __("[:en]telephone[:fr]Téléphone", "colibri") }}</h3>
 						<p class="general-enquiries">
 							{{ contacts.general_enquiries }}
 						</p>
@@ -47,7 +47,7 @@
 			</div>
 			<div class="contact-form-cnt">
 				<div class="contact-form">
-					<p class="form-title text-center">{{ __("Send us a message!", "colibri") }}</p>
+					<p class="form-title text-center">{{ __("[:en]Send us a message![:fr]Envoie-nous un message", "colibri") }}</p>
 					{{ function('do_shortcode', '[formidable id=' ~ contacts.form_id ~ ']') }}
 				</div>
 			</div>

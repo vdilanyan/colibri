@@ -5,7 +5,7 @@
 					<div class="flex-container footer-nav-cnt">
 						<div class="flex-container">
 							<div class="footer-nav grow-large">
-								<p class="font-extra-bold text-uppercase">{{ __("Products", "colibri") }}</p>
+								<p class="font-extra-bold text-uppercase">{{ __("[:en]Products[:fr]Produits", "colibri") }}</p>
 								<ul class="footer-menu products-menu">
 									{% for item in footer_menu_products.get_items %}
 										<li class="footer-nav-item {{ item.class }}">
@@ -17,7 +17,7 @@
 								</ul>
 							</div>
 							<div class="footer-nav">
-								<p class="font-extra-bold text-uppercase">{{ __("Help", "colibri") }}</p>
+								<p class="font-extra-bold text-uppercase">{{ __("[:en]Help[:fr]AIDE", "colibri") }}</p>
 								<ul class="footer-menu">
 									{% for item in footer_menu_help.get_items %}
 										<li class="footer-nav-item {{ item.class }}">
@@ -29,7 +29,7 @@
 								</ul>
 							</div>
 							<div class="footer-nav">
-								<p class="font-extra-bold text-uppercase">{{ __("About", "colibri") }}</p>
+								<p class="font-extra-bold text-uppercase">{{ __("[:en]About[:fr]A Propos", "colibri") }}</p>
 								<ul class="footer-menu">
 									{% for item in footer_menu_about.get_items %}
 										<li class="footer-nav-item {{ item.class }}">
@@ -43,7 +43,7 @@
 						</div>
 						{% if footer.social_links %}
 							<div class="footer-nav no-grow">
-								<p class="font-extra-bold text-uppercase">{{ __("Follow us on", "colibri") }}</p>
+								<p class="font-extra-bold text-uppercase">{{ __("[:en]Follow us on[:fr]Suivez nous", "colibri") }}</p>
 								<ul class="footer-menu list-inline social-menu">
 									{% for item in footer.social_links %}
 										<li class="footer-nav-item">
