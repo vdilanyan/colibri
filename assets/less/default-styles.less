@@ -110,6 +110,11 @@ body {
 			box-shadow: 0px 0px 20px @bg-light-blue;
 		}
 	}
+
+	@media (max-width: 767px) {
+		font-size: 18px;
+		padding: 12px 30px;
+	}
 }
 
 .page-title {
@@ -117,10 +122,26 @@ body {
 	letter-spacing: 0.04em;
 	color: @primary-blue;
 	text-align: center;
+
+	@media (max-width: 991px) {
+		font-size: 44px;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 32px;
+	}
 }
 
 .h1-lg {
 	font-size: @font-size-large;
+
+	@media (max-width: 991px) {
+		font-size: 44px;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 32px;
+	}
 }
 
 .section-title-small {
@@ -131,11 +152,27 @@ body {
 	line-height: 46px;
 	letter-spacing: 0.04em;
 	margin: 0 0 64px;
+
+	@media (max-width: 991px) {
+		font-size: 24px;
+		line-height: 34px;
+		margin: 0 0 40px; 
+	}
+
+	@media (max-width: 767px) {
+		font-size: 18px;
+		line-height: 28px;
+		margin: 0 0 32px; 
+	}
 }
 
 .faqs {
 	.more-faqs {
 		margin: 32px 0 0;
+
+		@media (max-width: 991px) {
+			margin: 24px 0 0;
+		}
 	}
 }
 

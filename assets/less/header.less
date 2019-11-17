@@ -13,6 +13,7 @@ header {
 	.header-nav-bar {
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 
 		#logo {
 			flex: 1;
@@ -65,12 +66,31 @@ header {
 			@media (min-width: 992px) {
 				display: block;
 			}
+
+			@media (max-width: 991px) {
+				position: absolute;
+				top: 100%;
+				right: 0;
+				background: #fff;
+				border-radius: 4px;
+				box-shadow: 0px 0px 20px rgba(196, 196, 196, 0.35);
+				z-index: 9999;
+			}
+
+			@media (max-width: 767px) {
+				left: 0;
+			}
 		}
 
 		.nav-main {
 			padding: 0;
 			margin: 0;
 			list-style-type: none;
+
+			@media (max-width: 991px) {
+				flex-direction: column;
+				padding: 20px;
+			}
 
 			> li.menu-item-has-children:hover {
 				.nav-drop-cnt {
@@ -84,6 +104,15 @@ header {
 				position: relative;
 				margin: 0 23px;
 				padding: 12px 0;
+
+				@media (max-width: 991px) {
+					margin: 0 0 24px;
+					padding: 0;
+
+					&:last-child {
+						margin: 0;
+					}
+				}
 
 				&:first-child {
 					margin-left: 0;
@@ -133,6 +162,10 @@ header {
 					transform-origin: top left;
 					opacity: 0;
 					visibility: hidden;
+
+					@media (max-width: 991px) {
+						transform: scale(0);
+					}
 
 					.nav-drop {
 						list-style-type: none;

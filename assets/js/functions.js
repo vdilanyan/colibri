@@ -17,6 +17,15 @@ $(document).ready(function() {
 		prevArrow: '<button class="slick-prev slick-arrow"><img src="' + wp_var.template_dir + '/assets/img/arrow-right.png"></button>',
 		nextArrow: '<button class="slick-next slick-arrow"><img src="' + wp_var.template_dir + '/assets/img/arrow-left.png"></button>',
 		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			}
+		],
 	});
 	
 	$('.nav-main a[href="#"]').click(function(e) {

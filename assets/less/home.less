@@ -3,6 +3,14 @@ body.home {
 		color: @secondary-blue;
 		letter-spacing: 0.02em;
 		margin: 0 0 64px;
+
+		@media (max-width: 991px) {
+			margin: 0 0 44px;
+		}
+
+		@media (max-width: 767px) {
+			margin: 0 0 32px;
+		}
 	}
 
 	.home-top-banner {
@@ -10,6 +18,15 @@ body.home {
 		padding: 140px 0 70px;
 		height: 850px;
 		align-items: center;
+		background-size: 770px, 100%;
+		background-repeat: no-repeat;
+		background-position: bottom right, center center;
+
+		@media (max-width: 991px) {
+			align-items: baseline;
+			background-size: 85%, 100%;
+			height: 700px;
+		}
 
 		.caption {
 			max-width: 500px;
@@ -21,6 +38,15 @@ body.home {
 			.slogan {
 				font-size: 60px;
 				margin: 0 0 64px;
+
+				@media (max-width: 991px) {
+					font-size: 46px;
+					margin: 0 0 44px;
+				}
+
+				@media (max-width: 767px) {
+					margin: 0 0 34px;
+				}
 			}
 		}
 	}
@@ -60,6 +86,10 @@ body.home {
 
 		.benefits-list-cnt {
 			padding-bottom: 90px;
+
+			@media (max-width: 991px) {
+				flex-direction: column;
+			}
 		}
 
 		.benefits-list {
@@ -69,9 +99,17 @@ body.home {
 		.capsule-image {
 			margin: 0 130px;
 
+			@media (max-width: 991px) {
+				order: 1;
+			}
+
 			img {
 				display: block;
 				margin: 0 auto;
+
+				@media (max-width: 991px) {
+					transform: rotate(90deg);
+				}
 			}
 		}
 
@@ -82,6 +120,11 @@ body.home {
 				position: relative;
 				margin-bottom: 55px;
 
+				@media (max-width: 991px) {
+					margin-bottom: 20px;
+					font-size: 16px;
+				}
+
 				&::after {
 					position: absolute;
 					bottom: 0;
@@ -89,6 +132,10 @@ body.home {
 
 				&:last-child {
 					margin-bottom: 0;
+
+					@media (max-width: 991px) {
+						margin-bottom: 20px; 
+					}
 				}
 			}
 
@@ -96,7 +143,19 @@ body.home {
 				text-align: right;
 				padding-top: 85px;
 
+				@media (max-width: 991px) {
+					text-align: left;
+					order: 2;
+					padding: 0;
+				}
+
 				.benefit {
+					@media (max-width: 991px) {
+						&::after {
+							display: none;
+						}
+					}
+
 					&:first-child {
 						&::after {
 							content: url('assets/img/b-1c-1e.png');
@@ -107,6 +166,10 @@ body.home {
 					&:nth-child(2) {
 						margin-right: 6px;
 
+						@media (max-width: 991px) {
+							margin-right: 0;
+						}
+
 						&::after {
 							content: url('assets/img/b-1c-2e.png');
 							left: calc(100% - 75px);
@@ -115,6 +178,10 @@ body.home {
 
 					&:nth-child(3) {
 						margin-right: 12px;
+
+						@media (max-width: 991px) {
+							margin-right: 0;
+						}
 
 						&::after {
 							content: url('assets/img/b-1c-3e.png');
@@ -125,7 +192,6 @@ body.home {
 					&:nth-child(4)::after {
 						content: url('assets/img/b-1c-4e.png');
 						left: calc(100% - 75px);
-
 					}
 				}
 
@@ -137,13 +203,33 @@ body.home {
 			&.second {
 				padding-top: 50px;
 
+				@media (max-width: 991px) {
+					order: 3;
+					padding: 0;
+				}
+
 				img {
 					margin-left: 20px;
+
+					@media (max-width: 991px) {
+						margin-left: 0;
+						margin-right: 20px;
+					}
 				}
 
 				.benefit {
-					&:first-child {
+					@media (max-width: 991px) {
+						display: flex;
+						flex-direction: row-reverse;
+						align-items: center;
+						justify-content: flex-end;
 
+						&::after {
+							display: none;
+						}
+					}
+
+					&:first-child {
 						&::after {
 							content: url('assets/img/b-2c-1e.png');
 							right: calc(100% - 65px);
@@ -152,6 +238,10 @@ body.home {
 
 					&:nth-child(2) {
 						margin-left: 6px;
+
+						@media (max-width: 991px) {
+							margin-left: 0;
+						}
 
 						&::after {
 							content: url('assets/img/b-2c-1e.png');
@@ -162,6 +252,10 @@ body.home {
 					&:nth-child(3) {
 						margin-left: 12px;
 
+						@media (max-width: 991px) {
+							margin-left: 0;
+						}
+
 						&::after {
 							content: url('assets/img/b-2c-2e.png');
 							right: calc(100% - 55px);
@@ -170,6 +264,10 @@ body.home {
 
 					&:nth-child(4) {
 						margin-left: -6px;
+
+						@media (max-width: 991px) {
+							margin-left: 0;
+						}
 
 						&::after {
 							content: url('assets/img/b-2c-2e.png');
@@ -184,6 +282,10 @@ body.home {
 	.steps {
 		height: 890px;
 
+		@media (max-width: 1199px) {
+			height: auto;
+		}
+
 		> .container {
 			height: 100%;
 		}
@@ -192,6 +294,15 @@ body.home {
 			height: 100%;
 			max-width: 50%;
 			align-items: center;
+
+			@media (max-width: 1199px) {
+				padding: 150px 0;
+			}
+
+			@media (max-width: 991px) {
+				padding: 20px 0;
+				max-width: 100%;
+			}
 
 			.steps-list {
 				margin-bottom: 46px;
@@ -215,12 +326,28 @@ body.home {
 		background-color: #FFF9F1;
 		padding: 180px 15px;
 
+		@media (max-width: 991px) {
+			padding: 75px 15px;
+		}
+
+		@media (max-width: 767px) {
+			padding: 50px 15px;
+		}
+
 		.product-information-cnt {
 			width: 700px;
 			margin: 0 auto;
 
+			@media (max-width: 767px) {
+				width: 100%;
+			}
+
 			img {
 				margin: 0 auto 46px;
+
+				@media (max-width: 767px) {
+					margin: 0 auto 24px;
+				}
 			}
 
 			p {
@@ -228,10 +355,18 @@ body.home {
 				color: @secondary-blue;
 				margin: 0;
 				letter-spacing: 0.02em;
+
+				@media (max-width: 767px) {
+					font-size: 20px;
+				}
 			}
 
 			.colibri-button {
 				margin-top: 64px;
+
+				@media (max-width: 767px) {
+					margin-top: 40px;
+				}
 			}
 		}
 	}
@@ -392,6 +527,10 @@ body.home {
 		.products-container {
 			justify-content: center;
 
+			@media (min-width: 510px) and (max-width: 991px) {
+				justify-content: space-between;
+			}
+
 			.product-item {
 				position: relative;
 				display: flex;
@@ -400,6 +539,11 @@ body.home {
 				flex: 0 0 33%;
 				text-align: center;
 				margin: 0 0 64px;
+
+				@media (max-width: 991px) {
+					flex: 0 0 45%;
+					margin: 0 0 46px;
+				}
 
 				&:hover {
 					img {
