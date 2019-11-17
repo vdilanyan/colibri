@@ -56,6 +56,10 @@ $(document).ready(function() {
 		var perPage = $(this).attr('data-per-page');
 		loadMorePosts(catSlug, offset, parentCnt, perPage, $(this));
 	});
+
+	$('header button.nav-toggle').click(function() {
+		$(this).toggleClass('active');
+	})
 });
 
 $(window).load(function() {

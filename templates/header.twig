@@ -11,7 +11,12 @@
 					Colibri Ecopods
 				</a>
 			</div>
-			<nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="header-main-menu">
+			<button class="nav-toggle visible-xs visible-sm" data-toggle="collapse" data-target="#header-main-menu">
+				<span class="burger-line"></span>
+				<span class="burger-line"></span>
+				<span class="burger-line"></span>
+			</button>
+			<nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="header-main-menu collapse" id="header-main-menu">
 				<ul class="nav-main flex-container">
 					{% for item in main_menu.get_items %}
 						<li class="nav-main-item {{ item.class }}">

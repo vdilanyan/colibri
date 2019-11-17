@@ -23,6 +23,50 @@ header {
 			}
 		}
 
+		.nav-toggle {
+			border: none;
+			background: transparent;
+			padding: 0;
+
+			.burger-line {
+				display: block;
+				border-radius: 1.5px;
+				width: 24px;
+				height: 2px;
+				margin-top: 3px;
+				background: @footer-menu-blue;
+				transition: all .25s;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+
+			&.active {
+				.burger-line {
+					&:first-child {
+						transform: rotate(45deg);
+					}
+
+					&:nth-child(2) {
+						opacity: 0;
+						visibility: hidden;
+					}
+
+					&:last-child {
+						transform: rotate(-45deg);
+						margin-top: -7px;
+					}
+				}
+			}
+		}
+
+		#header-main-menu {
+			@media (min-width: 992px) {
+				display: block;
+			}
+		}
+
 		.nav-main {
 			padding: 0;
 			margin: 0;

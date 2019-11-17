@@ -161,6 +161,39 @@ header .header-nav-bar #logo a {
   display: inline-block;
   color: #211B56;
 }
+header .header-nav-bar .nav-toggle {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+header .header-nav-bar .nav-toggle .burger-line {
+  display: block;
+  border-radius: 1.5px;
+  width: 24px;
+  height: 2px;
+  margin-top: 3px;
+  background: #4A4764;
+  transition: all 0.25s;
+}
+header .header-nav-bar .nav-toggle .burger-line:first-child {
+  margin-top: 0;
+}
+header .header-nav-bar .nav-toggle.active .burger-line:first-child {
+  transform: rotate(45deg);
+}
+header .header-nav-bar .nav-toggle.active .burger-line:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+}
+header .header-nav-bar .nav-toggle.active .burger-line:last-child {
+  transform: rotate(-45deg);
+  margin-top: -7px;
+}
+@media (min-width: 992px) {
+  header .header-nav-bar #header-main-menu {
+    display: block;
+  }
+}
 header .header-nav-bar .nav-main {
   padding: 0;
   margin: 0;
