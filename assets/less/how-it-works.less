@@ -2,6 +2,10 @@
 	.top-content {
 		margin-top: 64px;
 
+		@media (max-width: 767px) {
+			margin-top: 32px;
+		}
+
 		.page-title {
 			margin: 0 0 46px;
 		}
@@ -30,14 +34,33 @@
 	.how-its-made {
 		margin-top: 80px;
 
+		@media (max-width: 767px) {
+			margin-top: 40px;
+		}
+
 		.how-its-made-content {
 			padding: 0 125px;
 			align-items: center;
 			flex-wrap: nowrap;
 
-			img {
+			@media (max-width: 991px) {
+				padding: 0;
+				flex-direction: column;
+			}
+
+			> img {
 				max-width: 170px;
 				margin-right: 105px;
+
+				@media (max-width: 991px) {
+					max-width: 100%;
+					margin-right: 0;
+					transform: rotate(90deg);
+				}
+
+				@media (max-width: 767px) {
+					height: 300px;
+				}
 			}
 
 			.how-its-made-list {
@@ -49,6 +72,10 @@
 					display: flex;
 					align-items: center;
 					margin-bottom: 64px;
+
+					@media (max-width: 991px) {
+						margin-bottom: 20px;
+					}
 
 					&:last-child {
 						margin: 0;
@@ -77,12 +104,22 @@
 	.how-it-works {
 		margin-top: 80px;
 
+		@media (max-width: 767px) {
+			margin-top: 40px;
+		}
+
 		.flex-container {
 			justify-content: center;
 
 			.hiw-step {
 				width: 200px;
 				margin: 0 30px;
+
+				@media (max-width: 767px) {
+					width: auto;
+					flex: 1;
+					margin: 0 5px;
+				}
 
 				&:first-child {
 					margin-left: 0;
@@ -100,6 +137,11 @@
 					font-size: 24px;
 					color: @bg-light-blue;
 					margin: 24px 0 0;
+
+					@media (max-width: 767px) {
+						font-size: 18px;
+						margin: 18px 0 0;
+					}
 				}
 			}
 		}
@@ -108,6 +150,11 @@
 	.before-now {
 		margin-top: 120px;
 		padding-bottom: 60px;
+
+		@media (max-width: 767px) {
+			margin-top: 60px;
+			padding-bottom: 30px;
+		}
 
 		.section-title-small {
 			max-width: 546px;
@@ -122,6 +169,12 @@
 				flex-direction: column;
 				width: 225px;
 				margin: 0 100px;
+
+				&:first-child {
+					@media (max-width: 991px) {
+						margin-bottom: 64px;
+					}
+				}
 
 				&:last-child {
 					img {
@@ -146,12 +199,23 @@
 		padding: 62px 0 0;
 		margin-top: 60px;
 
+		@media (max-width: 767px) {
+			padding: 22px 0 0;
+			margin-top: 30px;
+		}
+
 		.container p {
 			font-size: 24px;
 			line-height: 46px;
 			letter-spacing: 0.04em;
 			margin: 0;
 			color: @primary-blue;
+
+			@media (max-width: 767px) {
+				font-size: 20px;
+				line-height: 40px;
+				text-align: left;
+			}
 		}
 	}
 }

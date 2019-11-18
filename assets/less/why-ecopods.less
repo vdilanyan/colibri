@@ -4,6 +4,10 @@
 		position: relative;
 		overflow: hidden;
 
+		@media (max-width: 767px) {
+			margin-top: 40px;
+		}
+
 		.water-image {
 			height: 258px;
 			position: relative;
@@ -16,10 +20,24 @@
 			padding: 340px 0 440px;
 			background: linear-gradient(180deg, #95D7ED 0%, rgba(214, 242, 252, 0) 100%);
 
+			@media (max-width: 991px) {
+				padding: 120px 0;
+			}
+
 			.top-banner-text {
 				color: @primary-blue;
 				font-size: 64px;
 				line-height: 74px;
+
+				@media (max-width: 991px) {
+					font-size: 44px;
+					line-height: 60px;
+				}
+
+				@media (max-width: 991px) {
+					font-size: 32px;
+					line-height: 46px;
+				}
 			}
 		}
 
@@ -94,6 +112,17 @@
 			line-height: 80px;
 			letter-spacing: 0.04em;
 			margin: 0 0 64px;
+
+			@media (max-width: 991px) {
+				font-size: 44px;
+				line-height: 60px;
+				margin: 0 0 40px;
+			}
+
+			@media (max-width: 991px) {
+				font-size: 32px;
+				line-height: 46px;
+			}
 		}
 
 		.avoid-plastic-description {
@@ -112,8 +141,17 @@
 				align-items: center;
 				margin-bottom: 110px;
 
+				@media (max-width: 767px) {
+					flex-direction: column;
+					margin-bottom: 50px;
+				}
+
 				&:nth-child(even) {
 					flex-direction: row-reverse;
+
+					@media (max-width: 767px) {
+						flex-direction: column;
+					}
 				}
 
 				.content {
@@ -123,6 +161,11 @@
 						line-height: 55px;
 						letter-spacing: 0.04em;
 						margin: 0 0 24px;
+
+						@media (max-width: 767px) {
+							font-size: 28px;
+							line-height: 32px;
+						}
 					}
 
 					.step-description {
@@ -131,6 +174,13 @@
 						letter-spacing: 0.04em;
 						margin: 0;
 						width: 385px;
+
+						@media (max-width: 767px) {
+							width: 100%;
+							margin: 0 0 20px;
+							font-size: 16px;
+							line-height: 24px;
+						}
 					}
 				}
 

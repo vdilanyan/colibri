@@ -7,6 +7,7 @@ $context['why_colibri'] = [
 	'page_title' => get_field('page_title'),
 	'page_content' => get_field('page_content'),
 	'photo' => get_field('photo'),
+	'make_image_circle' => get_field('make_image_circle'),
 	'the_tale_title' => get_field('the_tale_title'),
 	'do_nothing' => get_field('do_nothing'),
 	'do_something' => get_field('do_something'),

@@ -12,57 +12,63 @@
 				{{ why_colibri.page_content }}
 			</div>
 			<div class="page-content-photo">
-				<img src="{{ why_colibri.photo }}" alt="{{ why_colibri.page_title }}">
+				<img src="{{ why_colibri.photo }}" alt="{{ why_colibri.page_title }}" class="{% if why_colibri.make_image_circle %} img-circle {% endif %}">
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="tale">
-	<div class="container">
-		<p class="page-title font-extra-bold">
-			{{ why_colibri.the_tale_title }}
-		</p>
-		<div class="flex-container">
-			<div class="do-nothing tale-items alpha">
-				{% for item in why_colibri.do_nothing %}
-					<div class="tale-item text-center">
-						<p>{{ item.text }}</p>
-						<img src="{{ item.image }}" alt="{{ item.text }}">
-					</div>
-				{% endfor %}
-			</div>
-			<div class="verticlal-line"></div>
-			<div class="do-something tale-items omega">
-				{% for item in why_colibri.do_something %}
-					<div class="tale-item text-center">
-						<p>{{ item.text }}</p>
-						<img src="{{ item.image }}" alt="{{ item.text }}">
-					</div>
-				{% endfor %}
+{% if why_colibri.do_nothing|length > 0 or why_colibri.do_something|length > 0 %}
+	<section class="tale">
+		<div class="container">
+			<p class="page-title font-extra-bold">
+				{{ why_colibri.the_tale_title }}
+			</p>
+			<div class="flex-container">
+				<div class="do-nothing tale-items alpha">
+					{% for item in why_colibri.do_nothing %}
+						<div class="tale-item text-center">
+							<p>{{ item.text }}</p>
+							<img src="{{ item.image }}" alt="{{ item.text }}">
+						</div>
+					{% endfor %}
+				</div>
+				<div class="verticlal-line"></div>
+				<div class="do-something tale-items omega">
+					{% for item in why_colibri.do_something %}
+						<div class="tale-item text-center">
+							<p>{{ item.text }}</p>
+							<img src="{{ item.image }}" alt="{{ item.text }}">
+						</div>
+					{% endfor %}
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+{% endif %}
 
-<section class="idea">
-	<div class="container">
-		<p class="small-title text-center">
-			{{ why_colibri.idea_title }}
-		</p>
-		<img src="{{ why_colibri.idea_image }}" alt="{{ why_colibri.idea_title }}">
-	</div>
-</section>
+{% if why_colibri.idea_image %}
+	<section class="idea">
+		<div class="container">
+			<p class="small-title text-center">
+				{{ why_colibri.idea_title }}
+			</p>
+			<img src="{{ why_colibri.idea_image }}" alt="{{ why_colibri.idea_title }}">
+		</div>
+	</section>
+{% endif %}
 
-<section class="page-footer">
-	<div class="container">
-		<p class="small-title text-center">
-			{{ why_colibri.footer_title }}
-		</p>
-		<p class="page-footer-description text-center">
-			{{ why_colibri.footer_description }}
-		</p>
-	</div>
-</section>
+{% if why_colibri.footer_description %}
+	<section class="page-footer">
+		<div class="container">
+			<p class="small-title text-center">
+				{{ why_colibri.footer_title }}
+			</p>
+			<p class="page-footer-description text-center">
+				{{ why_colibri.footer_description }}
+			</p>
+		</div>
+	</section>
+{% endif %}
 
 {% endblock %}

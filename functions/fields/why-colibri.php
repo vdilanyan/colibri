@@ -18,7 +18,14 @@ $why_colibri
 	->addImage('photo', [
 		'return_format' => 'url',
 	])
+	->setWidth(50)
 	->setRequired()
+
+	->addTrueFalse('make_image_circle', [
+		'ui' => 1,
+		'default_value' => 1,
+	])
+	->setWidth(50)
 
 	->addTab('the_tale', [
 		'placement' => 'left',
@@ -26,9 +33,7 @@ $why_colibri
 	->addText('the_tale_title', [
 		'label' => 'Title'
 	])
-	->setRequired()
 	->addRepeater('do_nothing', [
-		'min' => 1,
 		'max' => 3,
 		'button_label' => 'Add Item',
 	])
@@ -42,7 +47,6 @@ $why_colibri
 	->endRepeater()
 
 	->addRepeater('do_something', [
-		'min' => 1,
 		'max' => 3,
 		'button_label' => 'Add Item',
 	])
@@ -61,12 +65,10 @@ $why_colibri
 	->addText('idea_title', [
 		'label' => 'Title',
 	])
-	->setRequired()
 
 	->addImage('idea_image', [
 		'return_format' => 'url',
 	])
-	->setRequired()
 
 	->addTab('page_footer', [
 		'placement' => 'left',
@@ -74,12 +76,10 @@ $why_colibri
 	->addText('footer_title', [
 		'label' => 'Title',
 	])
-	->setRequired()
 	->addTextarea('footer_description', [
 		'label' => 'Description',
 		'new_lines' => 'br',
 	])
-	->setRequired()
 
 	->setLocation('page_template', '==', 'why-colibri.php');
 
