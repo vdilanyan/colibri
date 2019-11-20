@@ -68,7 +68,11 @@ $(document).ready(function() {
 
 	$('header button.nav-toggle').click(function() {
 		$(this).toggleClass('active');
-	})
+	});
+
+	$('.nav-main > li.menu-item-shop-cart > a')
+		.text('')
+		.append('<img src="' + wp_var.template_dir + '/assets/img/cart-icon.png">');
 });
 
 $(window).load(function() {
@@ -81,8 +85,6 @@ $(window).scroll(function() {
 		var btnHeight = whyEcopodsBtn.outerHeight();
 		var btnOffsetBottom = whyEcopodsBtn.offset().top + btnHeight;
 		var windowScrollTop = $(this).scrollTop() + $(this).height() - 40;
-		console.log('windowScrollTop: ' + windowScrollTop);
-		console.log('btnOffsetBottom: ' + btnOffsetBottom);
 		if (windowScrollTop >= btnOffsetBottom) {
 			whyEcopodsBtn.height(btnHeight);
 			btn.addClass('fixed');

@@ -2,15 +2,39 @@ body.single {
 	.single-blog-post {
 		.banner-image {
 			height: 480px;
+
+			@media (max-width: 991px) {
+				height: 75vh;
+			}
+
+			@media (max-width: 767px) {
+				display: none;
+			}
 		}
 
 		.blog-post-entry {
 			width: 805px;
 			margin: 80px auto 120px;
 
+			@media (max-width: 991px) {
+				width: 100%;
+				margin: 60px auto 90px;
+				padding: 0 30px;
+			}
+
 			.page-title {
 				line-height: 78px;
 				margin: 0 0 64px;
+
+				@media (max-width: 991px) {
+					line-height: 60px;
+					margin: 0 0 40px;
+				}
+
+				@media (max-width: 767px) {
+					line-height: 42px;
+					margin: 0 0 32px;
+				}
 			}
 
 			.post-content {
@@ -29,6 +53,12 @@ body.single {
 					position: absolute;
 					top: 0;
 					right: calc(100% + 64px);
+
+					@media (max-width: 991px) {
+						position: static;
+						display: flex;
+						margin-top: 32px;
+					}
 				}
 			}
 
@@ -72,6 +102,10 @@ body.single {
 
 				&:last-child {
 					margin: 0;
+				}
+
+				@media (max-width: 991px) {
+					margin: 0 10px 0 0;
 				}
 			}
 

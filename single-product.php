@@ -20,36 +20,6 @@ $product_args = [
 	'post__not_in' => [$product->ID],
 ];
 
-$attahced_review_args = [
-	'post_type' => 'reviews',
-	'post_status' => 'publish',
-	'posts_per_page' => 3,
-	'meta_key' => 'attach_review',
-	'meta_value' => $product->ID,
-];
-
-$attached_reviews = get_posts($attahced_review_args);
-
-$reviews_args = [
-	'post_type' => 'reviews',
-	'post_status' => 'publish',
-	'posts_per_page' => -1,
-];
-
-$reviews = get_posts($reviews_args);
-
-if (count($reviews)) {
-	$total_review_stars = 0;
-
-	foreach ($reviews as $review) {
-		$total_review_stars += (int)get_field('star_rating', $review->ID);
-	}
-
-	$total_review_stars = round($total_review_stars / count($reviews));
-
-	$context['single_product']['total_product_rating'] = $total_review_stars;
-}
-
 $context['single_product'] = [
 	'post' => $product,
 	'gallery' => $gallery_images,
@@ -61,8 +31,6 @@ $context['single_product'] = [
 	'faqs_title' => get_field('faqs_title'),
 	'faqs' => get_field('faqs'),
 	'full_width_image' => get_field('full_width_image'),
-	'attached_reviews' => $attached_reviews,
-	'reviews' => $reviews,
 	'other_products' => Timber::get_posts($product_args),
 ];
 

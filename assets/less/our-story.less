@@ -88,13 +88,26 @@
 	.our-team {
 		margin: 120px 0;
 
+		@media (max-width: 991px) {
+			margin: 60px 0;
+		}
+
 		.page-title {
 			margin: 0 0 46px;
+
+			@media (max-width: 991px) {
+				margin: 0 0 32px;
+			}
 		}
 
 		.ceo-content {
 			flex-wrap: nowrap;
 			margin-bottom: 120px;
+
+			@media (max-width: 991px) {
+				flex-direction: column;
+				margin-bottom: 60px;
+			}
 		}
 
 		.ceo-image {
@@ -102,6 +115,11 @@
 			display: block;
 			width: 427px;
 			margin-right: 62px; 
+
+			@media (max-width: 991px) {
+				width: 100%;
+				margin: 0 auto;
+			}
 		}
 
 		.ceo-bio {
@@ -110,6 +128,14 @@
 				color: @primary-blue;
 				letter-spacing: 0.04em;
 				margin: 105px 0 150px;
+
+				@media (max-width: 991px) {
+					margin: 50px 0;
+				}
+
+				@media (max-width: 767px) {
+					margin: 25px 0;
+				}
 			}
 
 			.signature {
@@ -121,6 +147,10 @@
 					margin-right: 150px;
 					color: @primary-blue;
 					letter-spacing: 0.08em;
+
+					@media (max-width: 991px) {
+						margin-right: 0;
+					}
 
 					p {
 						margin: 0;
@@ -143,19 +173,34 @@
 			width: 830px;
 			margin: 0 auto;
 
+			@media (max-width: 991px) {
+				width: 100%;
+			}
+
 			.member {
 				display: flex;
 				margin: 0 0 64px;
+
+				@media (max-width: 991px) {
+					justify-content: space-between;
+				}
+
+				@media (max-width: 767px) {
+					flex-direction: column;
+				}
 
 				&:last-child {
 					margin: 0;
 				}
 
 				.photo-cnt {
-					display: flex;
 					flex-basis: 300px;
-					justify-content: center;
 					margin-right: 46px;
+
+					@media (max-width: 991px) {
+						flex-basis: 25%;
+						margin-right: 0;
+					}
 
 					img {
 						margin: 0 auto;
@@ -165,6 +210,11 @@
 				.member-info {
 					flex: 1;
 					color: @primary-blue;
+
+					@media (max-width: 991px) {
+						flex: 0;
+						flex-basis: calc(75% - 30px)
+					}
 					
 					.name {
 						font-size: 24px;

@@ -12,6 +12,7 @@ function enqueue_assets() {
 		[
 			"ajax_url" => admin_url("admin-ajax.php"),
 			"template_dir" => get_template_directory_uri(),
+			"home_url" => esc_url( home_url("/") ),
 		]
 	);
 }

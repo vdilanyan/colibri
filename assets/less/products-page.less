@@ -11,6 +11,14 @@
 			flex-basis: 500px;
 			margin: 54px 0 0;
 
+			@media (max-width: 1199px) {
+				flex-basis: 45%;
+			}
+
+			@media (max-width: 767px) {
+				flex-basis: calc(50% - 10px);
+			}
+
 			&:nth-child(-n+2) {
 				margin-top: 0;
 			}
@@ -38,6 +46,10 @@
 				margin: 0 auto 24px;
 				transition: .25s;
 
+				@media (max-width: 767px) {
+					margin: 0 auto 15px;
+				}
+
 				&.hover-state {
 					position: absolute;
 					left: 0;
@@ -51,6 +63,15 @@
 			span {
 				font-size: 36px;
 				color: @primary-blue;
+
+				@media (max-width: 991px) {
+					font-size: 24px;
+				}
+
+				@media (max-width: 767px) {
+					font-size: 18px;
+					line-height: 22px;
+				}
 			}
 		}
 
@@ -69,14 +90,27 @@
 			width: 70%;
 			margin: 0 auto;
 			line-height: 24px;
+
+			@media (max-width: 767px) {
+				font-size: 18px;
+				width: 100%;
+			}
 		}
 	}
 
 	.product-benefits {
 		padding: 120px 0;
 
+		@media (max-width: 767px) {
+			padding: 60px 0;
+		}
+
 		.benefits-columns {
 			justify-content: center;
+
+			@media (max-width: 767px) {
+				flex-direction: column;
+			}
 
 			.benefit {
 				flex: 1;
@@ -84,6 +118,16 @@
 				flex-direction: column;
 				justify-content: flex-end;
 				align-items: center;
+
+				@media (max-width: 767px) {
+					margin-bottom: 52px;
+				}
+
+				&:last-child {
+					@media (max-width: 767px) {
+						margin-bottom: 0;
+					}
+				}
 			}
 
 			img {

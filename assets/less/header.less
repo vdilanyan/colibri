@@ -146,9 +146,14 @@ header {
 					}
 				}
 
-				&.current-menu-item a::after,
+				&.current-menu-item > a::after,
 				&.current-menu-ancestor > a::after {
 					transform: scaleX(1);
+				}
+
+				&.qtranxs-lang-menu  > a::after,
+				&.menu-item-shop-cart > a::after {
+					display: none;
 				}
 
 				.nav-drop-cnt {

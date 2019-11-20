@@ -4,6 +4,7 @@
 
 <section class="product-info">
 	<div class="container">
+		<h1 class="product-title font-extra-bold visible-sm visible-xs">{{ single_product.post.post_title }}</h1>
 		<div class="flex-container">
 			{% if single_product.gallery %}
 				<div class="product-gallery">
@@ -24,7 +25,7 @@
 				</div>
 			{% endif %}
 			<div class="product-content">
-				<h1 class="product-title font-extra-bold">{{ single_product.post.post_title }}</h1>
+				<h1 class="product-title font-extra-bold visible-lg visible-md">{{ single_product.post.post_title }}</h1>
 				<p class="product-description">{{ single_product.post.post_content }}</p>
 				{% if single_product.product_features %}
 					<p class="product-features-title">
@@ -104,57 +105,6 @@
 
 {% if single_product.full_width_image %}
 	<div class="product-full-width-image" style="background: url({{ single_product.full_width_image }}) no-repeat center/cover;"></div>
-{% endif %}
-
-{% if single_product.attached_reviews %}
-	<section class="product-reviews">
-		<div class="container">
-			<div class="title-cnt">
-				<p class="h1 text-center font-extra-bold reviews-title">
-					{{ __("Reviews for %s" | format(single_product.post.post_title), "colibri") }}
-				</p>
-				<div class="total-reviews flex-container">
-					<img 
-						src="{{ theme.path }}/assets/img/stars/{{ single_product.total_product_rating }}.png"
-						class="total-stars"
-						alt="{{ single_product.total_product_rating }} stars"
-					>
-					<span class="reviews-count">
-						{{ __("Total: %d reviews" | format(single_product.reviews|length), "colibri") }}
-					</span>
-				</div>
-			</div>
-			<div class="reviews-cnt">
-				{% for review in single_product.attached_reviews %}
-					{% set rating = function('get_field', 'star_rating', review.ID) %}
-					<div class="single-review-cnt">
-						<div class="single-review">
-							<div class="review-header flex-container">
-								<p class="reviewer-name">{{ review.post_title }}</p>
-								<img src="{{ theme.path }}/assets/img/stars/{{ rating }}.png" alt="{{ rating }} stars">
-							</div>
-							<div class="review-footer flex-container">
-								<div class="review-content">
-									{{ review.post_content }}
-								</div>
-								<span class="review-date">
-									{{ review.post_date | date("d.m.Y") }}
-								</span>
-							</div>
-						</div>
-					</div>
-				{% endfor %}
-			</div>
-			<div class="view-more-cnt text-center">
-				<a
-					href="{{ function('get_post_type_archive_link', 'reviews') }}"
-					class="text-center view-more-btn font-extra-bold"
-				>
-					{{ __("View more", "colibri") }}
-				</a>
-			</div>
-		</div>
-	</section>
 {% endif %}
 
 {% if single_product.other_products %}
