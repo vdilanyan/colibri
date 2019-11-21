@@ -7,8 +7,6 @@ var termButton = $('.blog-terms a');
 var parentCnt = $('.blog-posts');
 var laodMore = $('.load-more a');
 
-console.log(wp_var.is_user_logged_in);
-
 $(document).ready(function() {
 	$('.our-customers-carousel').slick({
 		slidesToShow: 2,
