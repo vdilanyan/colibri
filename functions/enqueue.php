@@ -13,6 +13,8 @@ function enqueue_assets() {
 			"ajax_url" => admin_url("admin-ajax.php"),
 			"template_dir" => get_template_directory_uri(),
 			"home_url" => esc_url( home_url("/") ),
+			"current_user" => is_user_logged_in() ? get_userdata(wp_get_current_user()->ID)->display_name : '',
+			"is_user_logged_in" => is_user_logged_in(),
 		]
 	);
 }

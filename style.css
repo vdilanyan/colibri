@@ -320,6 +320,9 @@ header .header-nav-bar .nav-main > li.qtranxs-lang-menu > a::after,
 header .header-nav-bar .nav-main > li.menu-item-shop-cart > a::after {
   display: none;
 }
+header .header-nav-bar .nav-main > li.menu-item-sign-in {
+  font-size: 16px;
+}
 header .header-nav-bar .nav-main > li .nav-drop-cnt {
   position: absolute;
   white-space: nowrap;

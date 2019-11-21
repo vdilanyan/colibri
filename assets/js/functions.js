@@ -7,6 +7,8 @@ var termButton = $('.blog-terms a');
 var parentCnt = $('.blog-posts');
 var laodMore = $('.load-more a');
 
+console.log(wp_var.is_user_logged_in);
+
 $(document).ready(function() {
 	$('.our-customers-carousel').slick({
 		slidesToShow: 2,
@@ -73,6 +75,10 @@ $(document).ready(function() {
 	$('.nav-main > li.menu-item-shop-cart > a')
 		.text('')
 		.append('<img src="' + wp_var.template_dir + '/assets/img/cart-icon.png">');
+
+	if (wp_var.is_user_logged_in) {
+		$('.nav-main > li.menu-item-sign-in > a').text(wp_var.current_user);
+	}
 });
 
 $(window).load(function() {
